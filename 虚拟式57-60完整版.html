@@ -1,0 +1,3584 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>虚拟式现在时 · 第57–60课合并版</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Lora:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+
+
+:root {
+  --green: #2e7d32;
+  --green-light: #e8f5e9;
+  --green-mid: #a5d6a7;
+  --accent: #ff6f00;
+  --accent-light: #fff3e0;
+  --blue: #1565c0;
+  --blue-light: #e3f2fd;
+  --red: #c62828;
+  --purple: #6a1b9a;
+  --purple-light: #f3e5f5;
+  --bg: #fafaf7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #e0ddd6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 150%; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 36px 20px 64px;
+  line-height: 1.7;
+}
+
+.annot {
+  display: inline;
+  color: #e65100;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 700;
+}
+.annot-block {
+  display: block;
+  color: #e65100;
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 700;
+  padding-left: 14px;
+  margin-top: 1px;
+}
+
+/* HEADER */
+.header {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  border-left: 6px solid var(--green);
+  padding-left: 20px;
+}
+.lesson-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.header h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+.header h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* KEY RULE */
+.key-rule {
+  max-width: 820px;
+  margin: 0 auto 20px;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+.key-rule .kr-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.key-rule .kr-body {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.key-rule .kr-body strong { color: var(--accent); }
+
+/* TIME BOX */
+.time-box {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.time-box-header {
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+.time-box-body {
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 8px 12px;
+  align-items: start;
+}
+.time-label {
+  font-weight: 700;
+  color: var(--green);
+  font-size: 0.95rem;
+  padding-top: 2px;
+}
+
+/* SECTION */
+.section {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--green-light);
+  border-bottom: 1px solid var(--green-mid);
+}
+.section-num {
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--green);
+}
+.section-body {
+  padding: 16px 20px;
+}
+
+/* FORMULA TAG */
+.formula-tag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #90caf9;
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 6px;
+  margin: 0 0 10px;
+}
+
+/* EXAMPLES */
+.examples-block {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 14px;
+  margin: 8px 0 14px;
+}
+.ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #222;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+.ex em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--red);
+  border-bottom: 2px solid #ffcdd2;
+}
+.ex-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+  margin-bottom: 4px;
+}
+
+/* VERB LIST */
+.verb-list {
+  font-size: 0.93rem;
+  color: #444;
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 9px 14px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+/* NOTE BOX */
+.note-box {
+  display: inline-block;
+  background: var(--blue-light);
+  border: 1px solid #90caf9;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+.note-box.orange {
+  background: var(--accent-light);
+  border-color: #ffb74d;
+  color: var(--accent);
+}
+.note-box.purple {
+  background: var(--purple-light);
+  border-color: #ce93d8;
+  color: var(--purple);
+}
+
+/* TRANSLATION */
+.trans {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 1px;
+  margin-bottom: 6px;
+  padding-left: 2px;
+  line-height: 1.4;
+}
+.trans .zh { color: #6a1b9a; }
+.trans .en { color: #1565c0; }
+.big-title {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green);
+  padding-left: 4px;
+}
+
+/* SUMMARY */
+.summary {
+  max-width: 820px;
+  margin: 0 auto 20px;
+  background: var(--green-light);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+.summary .kr-title { font-weight: 700; color: var(--green); font-size: 1rem; margin-bottom: 6px; }
+.summary .kr-body { font-size: 1rem; color: #333; line-height: 1.9; }
+.summary .kr-body strong { color: var(--green); }
+
+
+:root {
+  --green: #2e7d32;
+  --green-light: #e8f5e9;
+  --green-mid: #a5d6a7;
+  --accent: #ff6f00;
+  --accent-light: #fff3e0;
+  --blue: #1565c0;
+  --blue-light: #e3f2fd;
+  --red: #c62828;
+  --purple: #6a1b9a;
+  --purple-light: #f3e5f5;
+  --bg: #fafaf7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #e0ddd6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 36px 20px 64px;
+  line-height: 1.7;
+}
+
+.annot {
+  display: inline;
+  color: #e65100;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* ── HEADER ── */
+.header {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  border-left: 6px solid var(--green);
+  padding-left: 20px;
+}
+.lesson-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.header h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+.header h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ── KEY RULE BANNER ── */
+.key-rule {
+  max-width: 820px;
+  margin: 0 auto 20px;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+.key-rule .kr-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.key-rule .kr-body {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.key-rule .kr-body strong { color: var(--accent); }
+
+/* ── CORE RULE BOX ── */
+.core-rule {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--green);
+  color: white;
+  border-radius: 12px;
+  padding: 16px 22px;
+}
+.core-rule .formula {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.core-rule .formula span {
+  background: rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 3px 12px;
+}
+.core-rule .formula .plus { opacity: 0.7; font-size: 1.3rem; }
+.core-rule .examples {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.95;
+  line-height: 2;
+}
+.core-rule .examples em {
+  font-style: normal;
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+  padding: 0 4px;
+  font-weight: 700;
+}
+.core-rule .annot-white {
+  display: block;
+  color: #FFD600;
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--green-light);
+  border-bottom: 1px solid var(--green-mid);
+}
+.section-num {
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--green);
+}
+.section-body {
+  padding: 16px 20px;
+}
+
+/* ── FORMULA TAG ── */
+.formula-tag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #90caf9;
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 6px;
+  margin: 6px 0 10px;
+}
+
+/* ── VERB LIST ── */
+.verb-list {
+  font-size: 0.93rem;
+  color: #444;
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 9px 14px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+.verb-list strong { color: var(--green); }
+
+/* ── EXAMPLES ── */
+.examples-block {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 14px;
+  margin-top: 8px;
+}
+.ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #222;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+.ex em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--red);
+  border-bottom: 2px solid #ffcdd2;
+}
+.ex-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-bottom: 4px;
+}
+
+/* ── INTENSITY SCALE ── */
+.intensity {
+  background: var(--purple-light);
+  border: 1px solid #ce93d8;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: var(--purple);
+  font-weight: 600;
+}
+.intensity .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+/* ── STRUCT TABLE ── */
+.struct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 10px 0 12px;
+}
+.struct-table td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  vertical-align: middle;
+}
+.struct-table .col-subj {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.struct-table .col-result {
+  background: var(--green-light);
+  color: var(--green);
+  font-weight: 600;
+}
+.struct-table .col-gray {
+  background: #f5f5f5;
+  color: #555;
+}
+
+/* ── NOTE TAG ── */
+.note-tag {
+  display: inline-block;
+  background: #fffde7;
+  border: 1px solid #f9a825;
+  color: #e65100;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+
+:root {
+  --green: #2e7d32;
+  --green-light: #e8f5e9;
+  --green-mid: #a5d6a7;
+  --accent: #ff6f00;
+  --accent-light: #fff3e0;
+  --blue: #1565c0;
+  --blue-light: #e3f2fd;
+  --red: #c62828;
+  --bg: #fafaf7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #e0ddd6;
+}
+
+/* annotation over green background */
+.annot {
+  display: block;
+  color: #FFD600;
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 700;
+  margin: 2px 0 4px 2px;
+  letter-spacing: 0.01em;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 36px 20px 64px;
+  line-height: 1.7;
+}
+
+/* ── HEADER ── */
+.header {
+  max-width: 820px;
+  margin: 0 auto 32px;
+  border-left: 6px solid var(--green);
+  padding-left: 20px;
+}
+.lesson-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.header h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.55rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+.header h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ── CORE RULE BOX ── */
+.core-rule {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  background: var(--green);
+  color: white;
+  border-radius: 12px;
+  padding: 18px 24px;
+}
+.core-rule .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+.core-rule .formula {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.core-rule .examples {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  opacity: 0.95;
+  line-height: 1.9;
+}
+.core-rule .examples em {
+  font-style: normal;
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  background: var(--green-light);
+  border-bottom: 1px solid var(--green-mid);
+}
+.section-icon {
+  font-size: 1.3rem;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--green);
+}
+.section-body {
+  padding: 18px 20px;
+}
+
+/* ── CATEGORY ── */
+.category {
+  margin-bottom: 20px;
+}
+.category:last-child { margin-bottom: 0; }
+
+.cat-label {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* ── FORMULA TAG ── */
+.formula-tag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #90caf9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 6px;
+  margin: 6px 0 10px;
+}
+
+/* ── VERB LIST ── */
+.verb-list {
+  font-size: 0.95rem;
+  color: #444;
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+.verb-list strong {
+  color: var(--green);
+}
+
+/* ── EXAMPLE SENTENCES ── */
+.examples-block {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 14px;
+  margin-top: 8px;
+}
+.ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.ex em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--red);
+  border-bottom: 2px solid #ffcdd2;
+}
+.ex-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-bottom: 4px;
+}
+
+/* ── STRUCTURE TABLE ── */
+.struct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+  margin: 10px 0 12px;
+}
+.struct-table td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  vertical-align: middle;
+}
+.struct-table .col-subj {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 160px;
+}
+.struct-table .col-mid {
+  background: #f5f5f5;
+  font-size: 0.88rem;
+  color: #555;
+  white-space: nowrap;
+}
+.struct-table .col-result {
+  background: var(--green-light);
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  border: none;
+  border-top: 2px dashed var(--border);
+}
+
+/* ── TRANSLATIONS ── */
+.trans {
+  font-family: 'Source Sans 3', sans-serif;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  padding-left: 2px;
+}
+.trans .zh { color: #1565c0; }
+.trans .en { color: #5d4037; }
+
+.verb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4px 10px;
+  font-size: 0.85rem;
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.verb-item { display: flex; flex-direction: column; padding: 3px 0; border-bottom: 1px solid #eee; }
+.verb-item:last-child { border-bottom: none; }
+.verb-es { font-weight: 600; color: var(--green); font-size: 0.9rem; }
+.verb-zh { font-size: 0.75rem; color: var(--blue); }
+.verb-en { font-size: 0.72rem; color: #888; font-style: italic; }
+.verb-item .verb-ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #333;
+  margin-top: 5px;
+  border-top: 1px dashed #ddd;
+  padding-top: 4px;
+}
+.verb-item .verb-ex b { color: var(--red); font-style: normal; }
+.verb-item .verb-ex-tr {
+  font-size: 0.72rem;
+  color: #888;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+/* ── KEY RULE BANNER ── */
+.key-rule {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 16px 22px;
+}
+.key-rule .kr-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key-rule .kr-body {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.key-rule .kr-body strong {
+  color: var(--accent);
+}
+
+
+:root {
+  --green: #2e7d32;
+  --green-light: #e8f5e9;
+  --green-mid: #a5d6a7;
+  --accent: #ff6f00;
+  --accent-light: #fff3e0;
+  --blue: #1565c0;
+  --blue-light: #e3f2fd;
+  --red: #c62828;
+  --bg: #fafaf7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #e0ddd6;
+}
+
+.annot {
+  display: block;
+  color: #FFD600;
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 700;
+  margin: 2px 0 4px 2px;
+  letter-spacing: 0.01em;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 36px 20px 64px;
+  line-height: 1.7;
+}
+
+/* ── HEADER ── */
+.header {
+  max-width: 820px;
+  margin: 0 auto 32px;
+  border-left: 6px solid var(--green);
+  padding-left: 20px;
+}
+.lesson-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.header h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.55rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+.header h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ── CORE RULE BOX ── */
+.core-rule {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  background: var(--green);
+  color: white;
+  border-radius: 12px;
+  padding: 18px 24px;
+}
+.core-rule .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+.core-rule .formula {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.core-rule .examples {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  opacity: 0.95;
+  line-height: 1.9;
+}
+.core-rule .examples em {
+  font-style: normal;
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  background: var(--green-light);
+  border-bottom: 1px solid var(--green-mid);
+}
+.section-icon { font-size: 1.3rem; }
+.section-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--green);
+}
+.section-body { padding: 18px 20px; }
+
+/* ── CATEGORY ── */
+.category { margin-bottom: 24px; }
+.category:last-child { margin-bottom: 0; }
+
+.cat-label {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* ── FORMULA TAG ── */
+.formula-tag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #90caf9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 6px;
+  margin: 6px 0 10px;
+}
+
+/* ── VERB GRID ── */
+.verb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4px 10px;
+  font-size: 0.85rem;
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.verb-item { display: flex; flex-direction: column; padding: 3px 0; border-bottom: 1px solid #eee; }
+.verb-item:last-child { border-bottom: none; }
+.verb-es { font-weight: 600; color: var(--green); font-size: 0.9rem; }
+.verb-zh { font-size: 0.75rem; color: var(--blue); }
+.verb-en { font-size: 0.72rem; color: #888; font-style: italic; }
+.verb-item .verb-ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #333;
+  margin-top: 5px;
+  border-top: 1px dashed #ddd;
+  padding-top: 4px;
+}
+.verb-item .verb-ex b { color: var(--red); font-style: normal; }
+.verb-item .verb-ex-tr {
+  font-size: 0.72rem;
+  color: #888;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+/* ── EXAMPLE SENTENCES ── */
+.examples-block {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 14px;
+  margin-top: 8px;
+}
+.ex {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+.ex em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--red);
+  border-bottom: 2px solid #ffcdd2;
+}
+.trans {
+  font-family: 'Source Sans 3', sans-serif;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  padding-left: 2px;
+}
+.trans .zh { color: #1565c0; }
+.trans .en { color: #5d4037; }
+
+/* ── KEY RULE BANNER ── */
+.key-rule {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 16px 22px;
+}
+.key-rule .kr-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key-rule .kr-body {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.key-rule .kr-body strong { color: var(--accent); }
+
+/* ── STRUCT TABLE ── */
+.struct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+  margin: 10px 0 16px;
+}
+.struct-table td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  vertical-align: middle;
+}
+.struct-table .col-subj {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.struct-table .col-mid {
+  background: #f5f5f5;
+  font-size: 0.88rem;
+  color: #555;
+  white-space: nowrap;
+}
+.struct-table .col-result {
+  background: var(--green-light);
+  color: var(--green);
+  font-weight: 600;
+}
+
+
+body { font-size: 150%; max-width: 900px; margin: 0 auto; padding: 20px 16px 80px; background: #f5f3ee; }
+.page-banner { background: #0f0f14; color: white; border-radius: 14px; padding: 26px 24px; margin-bottom: 32px; text-align: center; }
+.page-banner h1 { font-family: Lora, serif; font-style: italic; font-size: 1.6rem; margin-bottom: 6px; }
+.page-banner .sub { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.lesson-divider { display: flex; align-items: center; gap: 14px; margin: 44px 0 20px; padding: 16px 20px; border-radius: 12px; color: white; }
+.lesson-divider .num { font-size: 2rem; font-weight: 800; line-height: 1; flex-shrink: 0; }
+.lesson-divider .info h2 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+.lesson-divider .info p { font-size: 0.8rem; opacity: 0.8; font-style: italic; }
+.l57 { background: #1a5c38; } .l58 { background: #1a3f7a; } .l59 { background: #7a5200; } .l60 { background: #9b2020; }
+.contrast-insert { border-radius: 10px; overflow: hidden; margin: 16px 0; border: 1px solid #ddd; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+.ci-hdr { padding: 9px 16px; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.04em; color: white; }
+.ci-body { background: white; }
+.ci-sides { display: grid; gap: 1px; background: #e5e0d8; }
+.ci-sides.s2 { grid-template-columns: 1fr 1fr; }
+.ci-sides.s4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.ci-side { padding: 12px 14px; }
+.ci-side .sl { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 7px; }
+.ci-note { font-size: 0.79rem; line-height: 1.7; padding: 10px 16px; border-top: 1px solid #eee; }
+.ci-note strong { font-weight: 700; } .ci-note em { font-family: Lora, serif; font-style: italic; }
+@media (max-width: 600px) { .ci-sides.s2, .ci-sides.s4 { grid-template-columns: 1fr; } }
+
+
+
+:root {
+  --bg: #f0ede6;
+  --ink: #121218;
+  --muted: #888;
+  --border: #ddd8cf;
+  --card: #faf9f6;
+
+  --L: #1a5c38;   /* 左/意志 绿 */
+  --R: #8b1a1a;   /* 右/感受 红 */
+  --M: #1a3f7a;   /* 中/第三 蓝 */
+  --P: #5b3fa6;   /* 紫 */
+  --G: #7a5200;   /* 金 */
+
+  --L-l: #e6f4ec;
+  --R-l: #fdecea;
+  --M-l: #e4ecf8;
+  --P-l: #f0eafb;
+  --G-l: #fdf5dc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 28px 16px 80px;
+  max-width: 840px;
+  margin: 0 auto;
+  line-height: 1.65;
+  font-size: 150%;
+}
+
+/* ── PAGE HEADER ── */
+.masthead {
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.masthead h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.masthead .meta {
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: right;
+}
+.masthead .meta strong { color: var(--ink); font-style: normal; font-weight: 600; }
+
+/* ── SECTION INTRO ── */
+.intro-box {
+  background: var(--ink);
+  color: white;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 30px;
+  font-size: 0.83rem;
+  line-height: 1.75;
+}
+.intro-box em { color: #f0d080; font-style: normal; font-weight: 600; }
+
+/* ── PATTERN BLOCK ── */
+.pattern {
+  margin-bottom: 26px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.p-head {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.p-head .num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.p-head .title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+}
+.p-head .lesson-tag {
+  margin-left: auto;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  flex-shrink: 0;
+}
+
+/* ── FRAME ROW ── */
+.frame-row {
+  background: var(--card);
+  padding: 12px 20px 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.frame-row .label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.frame-row .formula {
+  font-style: italic;
+  font-size: 0.84rem;
+  color: #333;
+}
+.frame-row .formula b { font-style: normal; color: var(--ink); font-weight: 700; }
+.frame-row .formula .slot {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.78rem;
+  border: 1.5px dashed;
+}
+.slot-adj { background: #fff3cd; border-color: #e6a800; color: #7a5200; }
+.slot-v   { background: #fce4ec; border-color: #c62828; color: #8b1a1a; }
+.slot-n   { background: #e3f2fd; border-color: #1565c0; color: #1a3f7a; }
+
+/* ── SPLIT ── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--border);
+  gap: 1px;
+}
+.split.three { grid-template-columns: 1fr 1fr 1fr; }
+
+.col {
+  background: var(--card);
+  padding: 14px 18px;
+}
+
+.col-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+.col-head .dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.col-head .col-label {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Words list */
+.words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.word-tag {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.78rem;
+  padding: 2px 9px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+/* Example */
+.ex {
+  font-style: italic;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #111;
+  margin-bottom: 3px;
+}
+.ex b { font-style: normal; font-weight: 700; }
+.zh { font-size: 0.72rem; color: #1a3f7a; margin-bottom: 8px; font-style: normal; }
+.en { font-size: 0.68rem; color: #aaa; font-style: italic; margin-bottom: 8px; }
+
+.ex-block { margin-bottom: 10px; }
+.ex-block:last-child { margin-bottom: 0; }
+
+/* subtext inside col */
+.col-note {
+  font-size: 0.75rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-style: italic;
+}
+
+/* ── INSIGHT BAR ── */
+.insight {
+  background: var(--G-l);
+  border-top: 1px solid var(--border);
+  padding: 11px 20px;
+  font-size: 0.79rem;
+  line-height: 1.7;
+  color: #444;
+}
+.insight .i-lbl {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.67rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--G);
+  display: block;
+  margin-bottom: 4px;
+}
+.insight em { font-style: italic; color: #333; }
+.insight strong { font-weight: 700; color: var(--ink); }
+
+/* ── OVERLAP NOTE (for pattern 4) ── */
+.overlap {
+  background: var(--card);
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+}
+.overlap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+.overlap-item {
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 0.77rem;
+  line-height: 1.6;
+}
+.overlap-item .oi-lbl {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.overlap-item .oi-words {
+  display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 7px;
+}
+.overlap-item .oi-ex {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.overlap-item .oi-ex b { font-style: normal; }
+.overlap-item .oi-zh { font-size: 0.7rem; color: #1a3f7a; margin-top: 2px; }
+.overlap-item .oi-note { font-size: 0.7rem; color: #888; margin-top: 4px; font-style: italic; }
+
+/* ── SUMMARY TABLE ── */
+.summary-section {
+  margin-top: 36px;
+  border-top: 2px solid var(--ink);
+  padding-top: 20px;
+}
+.summary-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+.sum-table { width: 100%; border-collapse: collapse; font-size: 0.79rem; }
+.sum-table th {
+  background: var(--ink); color: white;
+  padding: 8px 12px; text-align: left;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700; font-size: 0.68rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.sum-table th:first-child { border-radius: 7px 0 0 0; }
+.sum-table th:last-child  { border-radius: 0 7px 0 0; }
+.sum-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.sum-table tr:last-child td { border-bottom: none; }
+.sum-table tr:nth-child(even) td { background: #faf8f3; }
+.sum-table .es-c { font-style: italic; }
+.sum-table .tag-L { color: var(--L); font-weight: 700; }
+.sum-table .tag-R { color: var(--R); font-weight: 700; }
+.sum-table .tag-M { color: var(--M); font-weight: 700; }
+.sum-table .tag-P { color: var(--P); font-weight: 700; }
+
+@media (max-width:580px) {
+  .split, .split.three { grid-template-columns: 1fr; }
+  .overlap-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+<script>
+(function(){
+  var inIframe = false;
+  try { inIframe = window.self !== window.top; } catch(e) { inIframe = true; }
+  if (!inIframe) return;
+
+  // In iframe: immediately neutralize all href="#id" so Claude never intercepts
+  function neutralize() {
+    document.querySelectorAll('.nav-link').forEach(function(a) {
+      a.setAttribute('href', 'javascript:void(0)');
+    });
+  }
+  // Run now (for already-rendered elements) and after DOM ready
+  neutralize();
+  document.addEventListener('DOMContentLoaded', neutralize);
+
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('.nav-link');
+    if (!a) return;
+    e.preventDefault();
+    var id = a.getAttribute('data-id');
+    if (id === 'page-top') { window.scrollTo(0, 0); return; }
+    var el = document.getElementById(id);
+    if (!el) return;
+    var top = 0, obj = el;
+    while (obj) { top += obj.offsetTop; obj = obj.offsetParent; }
+    window.scrollTo(0, Math.max(0, top - 70));
+  });
+})();
+</script>
+</head>
+<body>
+
+<span id="page-top"></span>
+<div class="page-banner"><h1>Presente de Subjuntivo</h1><div class="sub">同框不同义总结 + 第57–60课完整内容</div></div>
+
+
+<div style="margin:0 0 28px;padding-bottom:20px;border-bottom:2px solid #0f0f14;">
+  <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:8px;">前置总结</div>
+  <div style="font-family:'Lora',serif;font-style:italic;font-size:1.1rem;color:#0f0f14;">同框不同义 · 相同句型，不同含义</div>
+</div>
+<div class="masthead">
+  <h1>同框不同义<br><span style="font-size:0.75em;font-weight:700;color:var(--muted);">相同句型结构，实质含义不同</span></h1>
+  <div class="meta"><strong>第57–60课</strong><br>Presente de Subjuntivo</div>
+</div>
+
+<div class="intro-box">
+  这四课里有一个反复出现的现象：<em>句型框架完全一样</em>，但填入不同的词（形容词/动词/名词），说话者表达的就是完全不同的意思——<em>意志</em>（我要求/希望某事发生）还是<em>感受</em>（某事触发了我的情绪），还是<em>可能性判断</em>（某事也许发生）。掌握这个分类比死记例句有用得多。
+</div>
+
+<!-- ══ PATTERN 1 ══════════════════════════════════════════════════ -->
+<div class="pattern" id="mode-1">
+  <div class="p-head" style="background:#2c4a7c;">
+    <span class="num">模式 1</span>
+    <span class="title">es / me parece / considero / resulta + __ + que + 虚拟式</span>
+    <span class="lesson-tag"><a href="#sec-58-adj" class="nav-link" data-id="sec-58-adj" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第58课</a> · <a href="#sec-59-typeC" class="nav-link" data-id="sec-59-typeC" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第59课</a> · <a href="#sec-60-typeA" class="nav-link" data-id="sec-60-typeA" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第60课</a></span>
+  </div>
+  <div class="frame-row">
+    <span class="label">结构</span>
+    <span class="formula"><b>es</b> / <b>me parece</b> / <b>considero</b> / <b>resulta</b> + <span class="slot slot-adj">形容词 或 名词</span> + que + 虚拟式</span>
+  </div>
+
+  <!-- 三列：意志型 / 感受型 / 评价名词 -->
+  <div class="split three">
+
+    <div class="col" style="background:#e6f4ec;">
+      <div class="col-head">
+        <div class="dot" style="background:#1a5c38;"></div>
+        <span class="col-label" style="color:#1a5c38;">意志型形容词</span>
+      </div>
+      <div class="words">
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">importante</span>
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">necesario</span>
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">imprescindible</span>
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">conveniente</span>
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">útil</span>
+        <span class="word-tag" style="background:#d4edda;border-color:#1a5c38;color:#1a5c38;">fundamental</span>
+      </div>
+      <div class="ex-block"><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Es <b>necesario</b> que <b>vengas</b>.</p><p style="font-size:0.73rem;color:#1a3f7a;">你必须来。</p>
+        <div class="col-note">潜台词：<strong>应该/必须</strong>如此。说话者对从句动作发出意志。（第58课）</div>
+      </div>
+    </div>
+
+    <div class="col" style="background:#fdecea;">
+      <div class="col-head">
+        <div class="dot" style="background:#8b1a1a;"></div>
+        <span class="col-label" style="color:#8b1a1a;">感受型形容词</span>
+      </div>
+      <div class="words">
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">raro</span>
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">extraño</span>
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">sorprendente</span>
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">increíble</span>
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">preocupante</span>
+        <span class="word-tag" style="background:#fdecea;border-color:#8b1a1a;color:#8b1a1a;">horroroso</span>
+      </div>
+      <div class="ex-block"><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me parece <b>raro</b> que Julia no <b>quiera</b> salir.</p><p style="font-size:0.73rem;color:#1a3f7a;">我觉得她不想出去很奇怪。</p>
+        <div class="col-note">潜台词：<strong>让我觉得……</strong>。从句事件触发说话者情绪反应。（第59课）</div>
+      </div>
+    </div>
+
+    <div class="col" style="background:#f0eafb;">
+      <div class="col-head">
+        <div class="dot" style="background:#5b3fa6;"></div>
+        <span class="col-label" style="color:#5b3fa6;">评价名词</span>
+      </div>
+      <div class="words">
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">un error</span>
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">una pena</span>
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">un acierto</span>
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">una vergüenza</span>
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">una injusticia</span>
+        <span class="word-tag" style="background:#f0eafb;border-color:#5b3fa6;color:#5b3fa6;">un escándalo</span>
+      </div>
+      <div class="ex-block"><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me parece <b>un error</b> que no <b>estudies</b> más.</p><p style="font-size:0.73rem;color:#1a3f7a;">我觉得你不多学习是个错误。</p>
+        <div class="col-note">把事件<strong>定性归类</strong>，有结论感，比形容词更斩钉截铁。（第60课）</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 两面兼备区 -->
+  <div style="background:#faf9f6;padding:12px 18px;border-top:1px solid #e5e0d8;">
+    <div style="font-size:0.67rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#888;margin-bottom:8px;">⚠️ 两面兼备：横跨感受与评价的形容词</div>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px;">
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">vergonzoso</span>
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">injusto</span>
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">lamentable</span>
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">absurdo</span>
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">escandaloso</span>
+      <span class="word-tag" style="background:#f8f0ff;border-color:#7a5200;color:#7a5200;font-size:0.76rem;">incomprensible</span>
+    </div>
+    <div style="font-size:0.77rem;color:#555;line-height:1.65;">
+      这些词同时含有情感反应（<em>让人觉得……</em>）和隐含评价（<em>这是不对的</em>）。
+      日常中不需要刻意区分，但它们解释了为什么第59课和第60课的词表会有重叠。
+    </div>
+  </div>
+
+  <!-- 光谱条 -->
+  <div style="background:#f0ede6;padding:12px 18px;border-top:1px solid #e5e0d8;">
+    <div style="font-size:0.67rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#888;margin-bottom:8px;">形容词光谱：从纯意志到纯感受</div>
+    <div style="display:flex;align-items:center;gap:0;border-radius:8px;overflow:hidden;font-size:0.72rem;">
+      <div style="background:#1a5c38;color:white;padding:7px 12px;flex:1;text-align:center;font-style:italic;">necesario<br><span style="font-size:0.65rem;opacity:0.8;">必须</span></div>
+      <div style="background:#3a7a50;color:white;padding:7px 12px;flex:1;text-align:center;font-style:italic;">bueno / mejor<br><span style="font-size:0.65rem;opacity:0.8;">轻度建议</span></div>
+      <div style="background:#7a5200;color:white;padding:7px 12px;flex:1;text-align:center;font-style:italic;">vergonzoso<br><span style="font-size:0.65rem;opacity:0.8;">评价+感受</span></div>
+      <div style="background:#8b1a1a;color:white;padding:7px 12px;flex:1;text-align:center;font-style:italic;">raro<br><span style="font-size:0.65rem;opacity:0.8;">纯感受</span></div>
+    </div>
+    <div style="font-size:0.72rem;color:#888;margin-top:6px;display:flex;justify-content:space-between;">
+      <span>← 含"应该"越多</span><span>含"让我觉得"越多 →</span>
+    </div>
+  </div>
+
+  <div class="insight">
+    <span class="i-lbl">判断方法</span>
+    把填入的词换成中文（用英文想也行）：<br>
+    　<strong>能说"应该/必须"</strong>（<em>should / it's necessary that</em>）→ 意志型形容词（第58课）<br>
+    　<strong>只能说"让人觉得/令人"</strong>（<em>it's strange / surprising that</em>）→ 感受型形容词（第59课）<br>
+    　<strong>能把事件归入某类别</strong>（<em>it's a shame / a mistake / a good move</em>）→ 评价名词（第60课），语气最有结论感
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.2);">
+      <strong>💡 感叹句形式：同样的词可以包进 ¡Qué…! 结构</strong><br>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.08);padding:10px 12px;">
+          <div style="font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">A · 陈述句 — 平静客观</div>
+          <div style="font-style:italic;margin-bottom:3px;">Es <b>raro</b> que estén en casa.</div>
+          <div style="font-size:0.72rem;opacity:0.85;">这挺奇怪的。· It's strange that they're home.</div>
+          <div style="font-style:italic;margin:8px 0 3px;">Es una <b>pena</b> que no venga.</div>
+          <div style="font-size:0.72rem;opacity:0.85;">她不来，真可惜。· It's a shame she's not coming.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.15);padding:10px 12px;">
+          <div style="font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">B · 感叹句 — 情绪强烈</div>
+          <div style="font-style:italic;margin-bottom:3px;">¡Qué <b>raro</b> que estén en casa!</div>
+          <div style="font-size:0.72rem;opacity:0.85;">真奇怪！· How strange that they're home!</div>
+          <div style="font-style:italic;margin:8px 0 3px;">¡Qué <b>pena</b> que no venga!</div>
+          <div style="font-size:0.72rem;opacity:0.85;">真可惜她不来！· What a shame she's not coming!</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:0.77rem;opacity:0.9;">两者触发虚拟式的原因完全相同，区别只在主句是陈述句还是感叹句。</div>
+    </div>
+  </div>
+</div>
+<div class="pattern" id="mode-2">
+  <div class="p-head" style="background:#8b1a1a;">
+    <span class="num">模式 2</span>
+    <span class="title">decir + que + 陈述式（转述）/ 虚拟式（命令）</span>
+    <span class="lesson-tag"><a href="#sec-58-decir" class="nav-link" data-id="sec-58-decir" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第58课</a></span>
+  </div>
+  <div class="frame-row"><span class="label">结构</span><span class="formula"><b>decir</b> + que + <span class="slot slot-v">陈述式 or 虚拟式</span></span></div>
+  <div class="split"><div class="ci-side" style="background:white;"><div class="sl" style="color:#1a5c38;">decir + 陈述式 → 他说……（转述事实）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El jefe dice que <b>trabajan</b> bien.</p><p style="font-size:0.73rem;color:#1a3f7a;">老板说他们工作得很好。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me dice que <b>está</b> cansado.</p><p style="font-size:0.73rem;color:#1a3f7a;">他跟我说他很累。</p><div class="col-note">decir = 说，从句内容是已发生的事实</div></div><div class="ci-side" style="background:#fdecea;"><div class="sl" style="color:#8b1a1a;">decir + 虚拟式 → 他让……（传达命令）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El jefe dice que <b>trabajemos</b> más rápido.</p><p style="font-size:0.73rem;color:#1a3f7a;">老板让我们工作快一点。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me dice que <b>llame</b> mañana.</p><p style="font-size:0.73rem;color:#1a3f7a;">他让我明天打电话。</p><div class="col-note">decir = 让/叫，从句内容是被要求执行的动作</div></div></div>
+  <div class="insight"><span class="i-lbl">判断口诀</span>把 <em>decir</em> 换成中文："他<strong>说</strong>……" → 陈述式；"他<strong>让</strong>……" → 虚拟式。</div>
+</div>
+<div class="pattern" id="mode-3">
+  <div class="p-head" style="background:#1a3f7a;">
+    <span class="num">模式 3</span>
+    <span class="title">sentir + que + 陈述式（感知）/ 虚拟式（遗憾）</span>
+    <span class="lesson-tag"><a href="#sec-58-sentir" class="nav-link" data-id="sec-58-sentir" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第58课</a></span>
+  </div>
+  <div class="frame-row"><span class="label">结构</span><span class="formula"><b>sentir</b> + que + <span class="slot slot-v">陈述式 or 虚拟式</span></span></div>
+  <div class="split"><div class="ci-side" style="background:white;"><div class="sl" style="color:#1a5c38;">sentir + 陈述式 → 感觉到……（perceive）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que <b>estás</b> cansado.</p><p style="font-size:0.73rem;color:#1a3f7a;">我感觉到你很累。（你确实累了）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que algo <b>va</b> mal.</p><p style="font-size:0.73rem;color:#1a3f7a;">我感觉有什么地方不对。</p><div class="col-note">sentir = 感觉到，对应 I can feel that…</div></div><div class="ci-side" style="background:#fdecea;"><div class="sl" style="color:#8b1a1a;">sentir + 虚拟式 → 遗憾/致歉（regret）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que no te <b>guste</b> mi regalo.</p><p style="font-size:0.73rem;color:#1a3f7a;">我很遗憾你不喜欢我的礼物。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que no <b>podáis</b> venir.</p><p style="font-size:0.73rem;color:#1a3f7a;">我很遗憾你们不能来。</p><div class="col-note">sentir = 遗憾/抱歉，对应 I'm sorry that…</div></div></div>
+  <div class="insight"><span class="i-lbl">判断口诀</span>"我<strong>感觉到</strong>……" → 陈述式；"我<strong>遗憾/抱歉</strong>……" → 虚拟式。与模式2（decir）完全平行。</div>
+</div>
+
+
+
+<!-- ══ SUMMARY TABLE ══════════════════════════════════════════════ -->
+
+
+
+<div class="pattern" id="mode-4">
+  <div class="p-head" style="background:#1a3f7a;">
+    <span class="num">模式 4</span>
+    <span class="title">hacer + que — 强迫（第58课）vs 触发感受（第59课）</span>
+    <span class="lesson-tag"><a href="#sec-58-hacer" class="nav-link" data-id="sec-58-hacer" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第58课</a> · <a href="#sec-59-gracia" class="nav-link" data-id="sec-59-gracia" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第59课</a></span>
+  </div>
+  <div class="frame-row"><span class="label">结构</span><span class="formula"><b>hacer</b> + que + 虚拟式 &nbsp;/&nbsp; <b>me hace</b> + 名词 + que + 虚拟式</span></div>
+  <div class="split"><div class="ci-side" style="background:white;"><div class="sl" style="color:#1a5c38;">hacer que → 使/强迫（第58课，意志类）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siempre <b>haces</b> que me <b>sienta</b> mal.</p><p style="font-size:0.73rem;color:#1a3f7a;">你总是让我感觉不舒服。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El frío <b>hace</b> que la gente <b>se quede</b> en casa.</p><p style="font-size:0.73rem;color:#1a3f7a;">寒冷使人待在家里。</p><div class="col-note">主语是施动者（你/寒冷），直接宾语是被影响的人（me），<br>hacer = 强迫/使得</div></div><div class="ci-side" style="background:#fdf5dc;"><div class="sl" style="color:#7a5200;">me hace + 名词 → 触发感受（第59课，gustar类）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me <b>hace gracia</b> que siempre lo <b>confunda</b>.</p><p style="font-size:0.73rem;color:#1a3f7a;">他老是搞混，我觉得好好笑。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me <b>hace ilusión</b> que <b>vengas</b> a la boda.</p><p style="font-size:0.73rem;color:#1a3f7a;">你能来婚礼，我好期待。</p><div class="col-note">me 是间接宾语（说话者），从句是主语，<br><span id="sec-59-gracia" style="display:block;position:relative;top:-60px;"></span>hacer gracia/ilusión = 类 gustar 固定结构</div></div></div>
+  <div class="insight">
+    <span class="i-lbl">核心区别</span>
+    <em>haces que me sienta</em>：<strong>你</strong>是主语，你在施加影响，宾语是我（me）→ 意志类，第58课逻辑。<br><em>me hace gracia que…</em>：<strong>从句事件</strong>是主语，它触发了我的感受，me 是间接宾语 → gustar类，第59课逻辑。<br>判断方法：能把 <em>hacer</em> 换成 <em>obligar</em>（强迫）→ 第58课；能换成 <em>parecer</em>（让我觉得）→ 第59课。
+  </div>
+</div>
+
+<div class="pattern" id="mode-5">
+  <div class="p-head" style="background:#9b2020;">
+    <span class="num">模式 5</span>
+    <span class="title">可能性表达 — 程度排序 + 接语气规则</span>
+    <span class="lesson-tag"><a href="#sec-57-quiza" class="nav-link" data-id="sec-57-quiza" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第57课</a> · <a href="#sec-60-puede" class="nav-link" data-id="sec-60-puede" style="color:rgba(255,255,255,0.85);text-decoration:none;font-weight:800;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,0.18);cursor:pointer;border:none;">第60课</a></span>
+  </div>
+  <div class="frame-row"><span class="label">结构</span><span class="formula">可能性副词/短语 + que + <span class="slot slot-v">虚拟式 or 陈述式</span></span></div>
+  <div style="background:white;padding:14px 18px 4px;">
+  <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;margin-bottom:10px;">可能性从低到高 · 接语气规则</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#ddd;border-radius:8px;overflow:hidden;margin-bottom:14px;font-size:0.82rem;">
+    <div style="background:#fdecea;padding:10px 8px;text-align:center;">
+      <div style="font-size:0.62rem;font-weight:800;color:#9b2020;margin-bottom:5px;">不可能</div>
+      <div style="font-style:italic;font-weight:700;">es imposible</div>
+      <div style="font-size:0.65rem;color:#9b2020;margin-top:5px;font-weight:700;">只接虚拟式</div>
+    </div>
+    <div style="background:#fdf5dc;padding:10px 8px;text-align:center;">
+      <div style="font-size:0.62rem;font-weight:800;color:#7a5200;margin-bottom:5px;">不太可能</div>
+      <div style="font-style:italic;font-weight:700;">es dudoso</div>
+      <div style="font-size:0.65rem;color:#9b2020;margin-top:5px;font-weight:700;">只接虚拟式</div>
+    </div>
+    <div style="background:#e4ecf8;padding:10px 8px;text-align:center;">
+      <div style="font-size:0.62rem;font-weight:800;color:#1a3f7a;margin-bottom:5px;">有可能</div>
+      <div style="font-style:italic;font-weight:700;">es posible<br>puede (que)</div>
+      <div style="font-size:0.65rem;color:#9b2020;margin-top:5px;font-weight:700;">只接虚拟式</div>
+    </div>
+    <div style="background:#e6f4ec;padding:10px 8px;text-align:center;">
+      <div style="font-size:0.62rem;font-weight:800;color:#1a5c38;margin-bottom:5px;">很可能</div>
+      <div style="font-style:italic;font-weight:700;">es probable</div>
+      <div style="font-size:0.65rem;color:#9b2020;margin-top:5px;font-weight:700;">只接虚拟式</div>
+    </div>
+    <div style="background:#f0eafb;padding:10px 8px;text-align:center;">
+      <div style="font-size:0.62rem;font-weight:800;color:#5b3fa6;margin-bottom:5px;">也许（两可）</div>
+      <div style="font-style:italic;font-weight:700;">quizá<br>tal vez<br>acaso</div>
+      <div style="font-size:0.65rem;color:#5b3fa6;margin-top:5px;font-weight:700;">虚拟式 或 陈述式</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd;border-radius:8px;overflow:hidden;margin-bottom:12px;">
+    <div style="background:#fdecea;padding:11px 13px;">
+      <div style="font-size:0.66rem;font-weight:800;color:#9b2020;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:7px;">固定短语 → 只接虚拟式</div>
+      <p style="font-family:Lora,serif;font-style:italic;font-size:0.83rem;">Es <b>posible</b> que <b>llueva</b> esta tarde.</p>
+      <p style="font-size:0.72rem;color:#1a3f7a;">今天下午有可能下雨。</p>
+      <p style="font-family:Lora,serif;font-style:italic;font-size:0.83rem;margin-top:6px;"><b>Puede</b> que <b>llegue</b> tarde.</p>
+      <p style="font-size:0.72rem;color:#1a3f7a;">我可能会来晚。</p>
+    </div>
+    <div style="background:#f0eafb;padding:11px 13px;">
+      <div style="font-size:0.66rem;font-weight:800;color:#5b3fa6;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:7px;">副词 → 虚拟式或陈述式均可</div>
+      <p style="font-family:Lora,serif;font-style:italic;font-size:0.83rem;">Quizá <b>apruebe</b>. （不确定）</p>
+      <p style="font-size:0.72rem;color:#1a3f7a;">也许我能通过。（没把握）</p>
+      <p style="font-family:Lora,serif;font-style:italic;font-size:0.83rem;margin-top:6px;">Quizá <b>apruebo</b>. （略有把握）</p>
+      <p style="font-size:0.72rem;color:#1a3f7a;">也许我能通过。（感觉还行）</p>
+    </div>
+  </div>
+</div>
+  <div class="insight">
+    <span class="i-lbl">口诀</span>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;margin-bottom:10px;">
+      <div style="background:rgba(255,255,255,0.08);padding:10px 12px;">
+        <div style="font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">固定短语 → <strong>只能</strong>接虚拟式</div>
+        <div style="font-style:italic;font-size:0.82rem;line-height:1.9;">es posible<br>es probable<br>es dudoso<br>es imposible<br>puede (que)</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.18);padding:10px 12px;">
+        <div style="font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">副词 → 虚拟式<strong>或</strong>陈述式均可</div>
+        <div style="font-style:italic;font-size:0.82rem;line-height:1.9;">quizá<br>tal vez<br>acaso<br>probablemente<br>posiblemente</div>
+      </div>
+    </div>
+    <span style="background:#4caf50;color:#000;font-weight:800;padding:1px 7px;border-radius:4px;">为什么副词可以两选？</span> 副词本身只是标记"也许"，说话者可以再用语气来表态：<span style="background:#fdecea;color:#8b1a1a;font-weight:700;padding:1px 6px;border-radius:3px;">虚拟式 = 没把握</span>，<span style="background:#e6f4ec;color:#1a5c38;font-weight:700;padding:1px 6px;border-radius:3px;">陈述式 = 略有把握</span>。<br>
+    <span style="background:#ff7043;color:#fff;font-weight:800;padding:1px 7px;border-radius:4px;">为什么固定短语只能虚拟式？</span> 词义已经包含了不确定性，不需要再用语气选择，所以直接锁定虚拟式。
+  </div>
+</div>
+
+<div class="summary-section" id="summary">
+  <h2>总览：同一结构的不同含义类别</h2>
+  <table class="sum-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>句型框架</th>
+        <th>填入内容</th>
+        <th>含义类别</th>
+        <th>课次</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="es-c">es / me parece / considero / resulta + __ + que</td>
+        <td><span class="tag-L">意志型形容词</span> / <span class="tag-R">感受型形容词</span> / <span class="tag-M">评价名词</span></td>
+        <td>应该（58）/ 让人觉得（59）/ 定性归类（60）— 填入内容决定含义类别</td>
+        <td>58/59/60</td>
+      </tr>
+      <tr>
+        <td class="es-c">decir + que + __</td>
+        <td><span class="tag-L">陈述式</span> / <span class="tag-R">虚拟式</span></td>
+        <td>他说……（转述）/ 他让……（命令）</td>
+        <td>58</td>
+      </tr>
+      <tr>
+        <td class="es-c">sentir + que + __</td>
+        <td><span class="tag-L">陈述式</span> / <span class="tag-R">虚拟式</span></td>
+        <td>感觉到……（感知）/ 我很遗憾……（致歉）</td>
+        <td>58</td>
+      </tr>
+
+      <tr>
+        <td class="es-c">¡Qué + 名词/形容词 + que…! vs es + 名词/形容词 + que…</td>
+        <td><span class="tag-L">感叹句 vs 陈述句</span></td>
+        <td>情感强烈口语 vs 平静客观书面，同词两种包装</td>
+        <td>57/59/60</td>
+      </tr>
+      <tr>
+        <td class="es-c">hacer + que + 虚拟式</td>
+        <td><span class="tag-M">直接宾语 vs 间接宾语</span></td>
+        <td>使/强迫（58课）vs me hace gracia/ilusión触发感受（59课）</td>
+        <td>58/59</td>
+      </tr>
+      <tr>
+        <td class="es-c">可能性表达 + que + 虚拟式</td>
+        <td><span class="tag-P">固定短语 vs 副词</span></td>
+        <td>es posible/puede que → 只接虚拟式；quizá/tal vez → 虚拟式或陈述式均可</td>
+        <td>57/60</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="margin:36px 0;border-top:2px solid #0f0f14;padding-top:24px;"><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin-bottom:8px;">课程内容</div><div style="font-family:'Lora',serif;font-style:italic;font-size:1.1rem;color:#0f0f14;">第57–60课 · 完整内容</div></div>
+
+<div class="lesson-divider l57" id="lesson-57"><div class="num">57</div><div class="info"><h2>感叹句 · 副词表可能 · 命令</h2><p>Exclamaciones · Adverbios · Mandato</p></div></div>
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="lesson-num">第 57 课</div>
+  <h1>¡Ojalá estén en casa! · ¡Que tengas buen viaje!</h1>
+  <h2>虚拟式现在时（1）· Presente de Subjuntivo (1)</h2>
+</div>
+
+<!-- KEY RULES -->
+<div class="key-rule">
+  <div class="kr-title">⚡ 两个基本要点</div>
+  <div class="kr-body">
+    · 虚拟式现在时的变位 → <strong>相关语法点：附录 9</strong><br>
+    · 虚拟式现在时可以谈论<strong>现在</strong>或<strong>将来</strong>
+  </div>
+</div>
+
+<!-- TIME EXAMPLES -->
+<div class="time-box">
+  <div class="time-box-header">现在 vs 将来</div>
+  <div class="time-box-body">
+    <div class="time-label">现在：</div>
+    <div>
+      <div class="ex">¡Ojalá <em>estén</em> en casa!</div>
+      <span class="trans"><span class="zh">希望他们在家！</span> &nbsp;·&nbsp; <span class="en">I hope they are at home!</span></span>
+      <div class="ex">–¿Tienes un metro? –No, pero puede que Juan <em>tenga</em> uno.</div>
+      <span class="trans"><span class="zh">你有地铁票吗？——没有，但也许胡安有一张。</span> &nbsp;·&nbsp; <span class="en">Do you have a metro ticket? – No, but maybe Juan has one.</span></span>
+    </div>
+    <div class="time-label">将来：</div>
+    <div>
+      <div class="ex">¡Ojalá <em>tengas</em> suerte mañana!</div>
+      <span class="trans"><span class="zh">希望你明天好运！</span> &nbsp;·&nbsp; <span class="en">I hope you have good luck tomorrow!</span></span>
+      <div class="ex">–¿Ha venido Jorge? –No, pero quizá <em>venga</em> más tarde.</div>
+      <span class="trans"><span class="zh">豪尔赫来了吗？——没有，但也许晚点会来。</span> &nbsp;·&nbsp; <span class="en">Has Jorge come? – No, but maybe he'll come later.</span></span>
+    </div>
+  </div>
+</div>
+
+<div class="big-title">● 虚拟式现在时用于：</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title">在感叹句中表达愿望</div>
+  </div>
+  <div class="section-body">
+
+    <!-- que -->
+    <div class="formula-tag">¡que + 虚拟式现在时（+ 主语）!</div>
+    <div class="examples-block">
+      <div class="ex">¡<em>Que tengas</em> buen viaje!</div>
+      <span class="trans"><span class="zh">祝你旅途愉快！</span> &nbsp;·&nbsp; <span class="en">Have a good trip!</span></span>
+      <div class="ex">–Rocío y Eva van a intentar escalar el Qomolangma. –¡Que no les <em>pase</em> nada!</div>
+      <span class="trans"><span class="zh">罗西奥和埃娃要去攀登珠穆朗玛峰。——希望她们平安无事！</span> &nbsp;·&nbsp; <span class="en">Rocío and Eva are going to try to climb Everest. – I hope nothing happens to them!</span></span>
+      <div class="ex">–Mañana tengo el examen de conducir. –¡Que te <em>salga</em> bien!</div>
+      <span class="trans"><span class="zh">我明天有驾照考试。——祝你考过！</span> &nbsp;·&nbsp; <span class="en">I have my driving test tomorrow. – I hope it goes well for you!</span></span>
+    </div>
+
+    <!-- ojalá -->
+    <div class="formula-tag">¡ojalá (que) + 虚拟式现在时（+ 主语）!</div>
+    <div class="examples-block">
+      <div class="ex">–Juan ha tenido un accidente. –¡Ojalá (que) no <em>sea</em> grave!</div>
+      <span class="trans"><span class="zh">胡安出事故了。——希望不严重！</span> &nbsp;·&nbsp; <span class="en">Juan has had an accident. – I hope it's not serious!</span></span>
+      <div class="ex">–La economía va mal. –¡Ojalá <em>suba</em> la bolsa!</div>
+      <span class="trans"><span class="zh">经济不景气。——希望股市涨！</span> &nbsp;·&nbsp; <span class="en">The economy is doing badly. – I hope the stock market goes up!</span></span>
+      <div class="ex">–Mañana tengo una entrevista para un trabajo. –¡Ojalá te lo <em>den</em>!</div>
+      <span class="trans"><span class="zh">我明天有工作面试。——希望你得到这份工作！</span> &nbsp;·&nbsp; <span class="en">I have a job interview tomorrow. – I hope they give it to you!</span></span>
+    </div>
+
+    <!-- así -->
+    <div class="formula-tag">así + 虚拟式现在时（+ 主语）</div>
+    <div class="examples-block">
+      <div class="ex">–Arturo se ha comido todos los bombones. –Así le <em>sienten</em> mal.</div>
+      <span class="trans"><span class="zh">阿图罗把所有巧克力都吃了。——活该他吃坏肚子。</span> &nbsp;·&nbsp; <span class="en">Arturo ate all the chocolates. – Serves him right if they make him sick.</span></span>
+    </div>
+    <div class="note-box orange" style="display:block;">
+      ⚠️ así + 虚拟式现在时通常用于表达<strong>不好的愿望</strong><br>
+      ¡Asesino! ¡Así te <em>pudras</em> en la cárcel!
+      <span class="trans" style="padding-left:0;"><span class="zh">杀人犯！你就在监狱里烂掉吧！</span> &nbsp;·&nbsp; <span class="en">Murderer! I hope you rot in prison!</span></span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title">在感叹句中表达各种感受：高兴、伤心、惊讶等</div>
+  </div>
+  <div class="section-body">
+
+    <div class="formula-tag">¡qué + 名词或形容词 + que（+ 主语）+ 虚拟式现在时（+ 主语）!</div>
+    <div class="examples-block">
+      <div class="ex">¡Qué pena que no <em>venga</em> Pilar!</div>
+      <span class="trans"><span class="zh">真可惜皮拉尔不来！</span> &nbsp;·&nbsp; <span class="en">What a shame that Pilar isn't coming!</span></span>
+      <div class="ex">¡Qué raro que <em>estén</em> en casa!</div>
+      <span class="trans"><span class="zh">真奇怪他们竟然在家！</span> &nbsp;·&nbsp; <span class="en">How strange that they are at home!</span></span>
+      <div class="ex">¡Qué extraño que no <em>haya</em> nadie en la oficina!</div>
+      <span class="trans"><span class="zh">真奇怪办公室里一个人都没有！</span> &nbsp;·&nbsp; <span class="en">How strange that there's nobody in the office!</span></span>
+      <div class="ex">¡Qué alegría que <em>vengan</em> tus padres!</div>
+      <span class="trans"><span class="zh">你父母要来，真开心！</span> &nbsp;·&nbsp; <span class="en">How wonderful that your parents are coming!</span></span>
+      <div class="ex">¡Qué lástima que Jesús <em>sea</em> tan desagradable! ¡Con lo listo que es!</div>
+      <span class="trans"><span class="zh">真遗憾赫苏斯这么令人讨厌！他明明那么聪明。</span> &nbsp;·&nbsp; <span class="en">What a pity that Jesús is so unpleasant! With how clever he is!</span></span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title">与某些副词一起表示可能或疑问</div>
+  </div>
+  <div class="section-body">
+
+    <div class="verb-list">
+      <span id="sec-57-quiza" style="display:block;position:relative;top:-60px;"></span>acaso, quizá, quizás, tal vez, <strong>probablemente</strong>, <strong>posiblemente</strong>
+    </div>
+    <div class="note-box" style="display:block;margin-bottom:12px;">
+      💡 这些副词后可接<strong>虚拟式</strong>（不确定性更强）或<strong>陈述式</strong>（确定性略高），两者均可
+    </div>
+
+    <div class="examples-block">
+      <div class="ex-pair">
+        <div>
+          <div class="ex">Quizá <em>apruebe</em>. No me parece tan difícil.</div>
+          <span class="trans"><span class="zh">也许我能通过。我觉得没那么难。</span> &nbsp;·&nbsp; <span class="en">Maybe I'll pass. It doesn't seem that hard to me.</span></span>
+        </div>
+        <div>
+          <div class="ex">Tal vez <em>consiga</em> un trabajo.</div>
+          <span class="trans"><span class="zh">也许我能找到一份工作。</span> &nbsp;·&nbsp; <span class="en">Maybe I'll find a job.</span></span>
+        </div>
+      </div>
+      <div class="ex">–¿Has visto a Lola? –No, pero probablemente <em>esté</em> en su habitación.</div>
+      <span class="trans"><span class="zh">你见过洛拉吗？——没有，但她可能在自己房间里。</span> &nbsp;·&nbsp; <span class="en">Have you seen Lola? – No, but she's probably in her room.</span></span>
+      <div class="ex">–Luis dice que está enfermo. Acaso <em>sea</em> una excusa para no ir a la boda de su sobrina.</div>
+      <span class="trans"><span class="zh">路易斯说他生病了。也许这是不去侄女婚礼的借口。</span> &nbsp;·&nbsp; <span class="en">Luis says he's ill. Maybe it's an excuse not to go to his niece's wedding.</span></span><div class="contrast-insert"><div class="ci-hdr" style="background:#1a5c38;">⚠️ 对比：quizá / tal vez / acaso / probablemente / posiblemente — 虚拟式 vs 陈述式</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">+ 虚拟式 → 不确定性更强，说话者没把握</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Quizá <b>apruebe</b>.</p><p style="font-size:0.73rem;color:#1a3f7a;">也许我能通过（不太确定）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Tal vez <b>venga</b> más tarde.</p><p style="font-size:0.73rem;color:#1a3f7a;">也许晚点会来（不确定）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Probablemente <b>esté</b> en su habitación.</p><p style="font-size:0.73rem;color:#1a3f7a;">她可能在自己房间里</p></div><div class="ci-side" style="background:#e4ecf8;"><div class="sl" style="color:#1a3f7a;">+ 陈述式 → 略有把握，说话者倾向于相信</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Quizá <b>apruebo</b>.</p><p style="font-size:0.73rem;color:#1a3f7a;">也许我能通过（感觉还行）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Tal vez <b>viene</b> más tarde.</p><p style="font-size:0.73rem;color:#1a3f7a;">也许晚点会来（感觉会来）</p></div></div><div class="ci-note">两者均可，选哪个取决于说话者的把握程度。注意：第60课的 <em>es posible / es probable / puede que</em> 则<strong>只能接虚拟式</strong>，没有陈述式选项。</div></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title">与 que 一起表示命令</div>
+  </div>
+  <div class="section-body">
+
+    <div class="examples-block">
+      <div class="ex">En cuanto llegue tu hermano a casa, que me <em>llame</em> inmediatamente.</div>
+      <span class="trans"><span class="zh">你哥哥一到家就让他立刻给我打电话。</span> &nbsp;·&nbsp; <span class="en">As soon as your brother gets home, tell him to call me immediately.</span></span>
+      <div class="ex">Los niños están haciendo mucho ruido. Que se <em>vayan</em> a su cuarto.</div>
+      <span class="trans"><span class="zh">孩子们太吵了。让他们去自己房间。</span> &nbsp;·&nbsp; <span class="en">The kids are making a lot of noise. Tell them to go to their room.</span></span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-title">在感叹句中用 que 引导并重复前面说过的命令</div>
+  </div>
+  <div class="section-body">
+
+    <div class="note-box orange" style="display:block;margin-bottom:12px;">
+      ⚠️ 表示语气更加强烈
+    </div>
+    <div class="examples-block">
+      <div class="ex">–Estate quieto… –¡Que te <em>estés</em> quieto!</div>
+      <span class="trans"><span class="zh">别动……——让你别动！</span> &nbsp;·&nbsp; <span class="en">Keep still… – I said keep still!</span></span>
+      <div class="ex">–Cállate, por favor. –No quiero. –¡Que te <em>calles</em>!</div>
+      <span class="trans"><span class="zh">请你闭嘴。——我不想。——让你闭嘴！</span> &nbsp;·&nbsp; <span class="en">Be quiet, please. – I don't want to. – I said be quiet!</span></span>
+    </div>
+
+  </div>
+</div>
+
+<div class="contrast-insert"><div class="ci-hdr" style="background:#1a5c38;">⚠️ 对比：¡Qué + 名词/形容词 + que…! vs es + 名词/形容词 + que… — 同词，感叹句 vs 陈述句</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">感叹句结构 → 情感强烈，口语，有感叹号</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">¡Qué <b>raro</b> que <b>estén</b> en casa!</p><p style="font-size:0.73rem;color:#1a3f7a;">真奇怪他们竟然在家！</p><p style="font-size:0.71rem;color:#777;font-style:normal;">← 说话者在发泄惊讶，带情绪</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">¡Qué <b>pena</b> que no <b>venga</b> Pilar!</p><p style="font-size:0.73rem;color:#1a3f7a;">真可惜皮拉尔不来！</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">¡Qué <b>alegría</b> que <b>vengan</b> tus padres!</p><p style="font-size:0.73rem;color:#1a3f7a;">你父母要来，真开心！</p></div><div class="ci-side" style="background:#fdf5dc;"><div class="sl" style="color:#7a5200;">陈述句结构 → 平静客观，书面，无感叹号</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Es <b>raro</b> que <b>estén</b> en casa.</p><p style="font-size:0.73rem;color:#1a3f7a;">他们在家，这挺奇怪的。</p><p style="font-size:0.71rem;color:#777;font-style:normal;">← 客观描述一个奇怪的事实，没有情绪色彩</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Es una <b>pena</b> que no <b>pueda</b> venir.</p><p style="font-size:0.73rem;color:#1a3f7a;">她不能来，真可惜。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Es <b>estupendo</b> que <b>vengan</b> tus padres.</p><p style="font-size:0.73rem;color:#1a3f7a;">你父母要来，太好了。</p></div></div><div class="ci-note"><strong>同一内容，两种包装</strong>：raro / pena / alegría / lástima 这些词两种结构都能用。感叹句（¡Qué…!）把说话者的情绪推到前台，更口语更有感染力；陈述句（Es…）更像在陈述判断，书面或冷静场合用。两者都触发虚拟式，触发原因相同，<em>呈现方式</em>不同。</div></div></div>
+
+<!-- SUMMARY -->
+<div class="summary">
+  <div class="kr-title">📌 虚拟式现在时用法总结</div>
+  <div class="kr-body">
+    <strong>① 感叹句表达愿望</strong>：¡que…! &nbsp;/&nbsp; ¡ojalá (que)…! &nbsp;/&nbsp; así…（表不好的愿望）<br>
+    <strong>② 感叹句表达感受</strong>：¡qué + 名词/形容词 + que + 虚拟式!<br>
+    <strong>③ 表示可能/疑问</strong>：quizá / tal vez / acaso / probablemente / posiblemente + 虚拟式<br>
+    <strong>④ 表示命令</strong>：que + 虚拟式<br>
+    <strong>⑤ 重复强调命令</strong>：¡que + 虚拟式!（语气更强烈）
+  </div>
+</div>
+
+
+
+<div class="lesson-divider l58" id="lesson-58"><div class="num">58</div><div class="info"><h2>意愿 · 命令 · 请求 · 允许</h2><p>Volición · Mandato · Petición · Permiso</p></div></div>
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="lesson-num">第 58 课</div>
+  <h1>Necesito que me ayudes. · Quiero que escuches esto.</h1>
+  <h2>虚拟式现在时（2）· Presente de Subjuntivo (2)</h2>
+</div>
+
+<!-- KEY RULE -->
+<div class="key-rule">
+  <div class="kr-title">⚡ 使用条件</div>
+  <div class="kr-body">
+    当<strong>主从句主语不同</strong>，或主句是<strong>无人称句</strong>时，虚拟式现在时可用于从句中指现在或将来。
+  </div>
+</div>
+
+<!-- CORE RULE BOX -->
+<div class="core-rule">
+  <div class="formula">
+    <span>陈述式现在时</span>
+    <span>命令式</span>
+    <span class="plus">+</span>
+    <span>que + 虚拟式现在时</span>
+  </div>
+  <div class="examples">
+    (Yo) <em>Espero</em> que (tú) me <em>llames</em> pronto. &nbsp;·&nbsp; <em>Déjame</em> (tú) que (yo) te <em>ayude</em>.<br>
+    (A mí) Me parece <em>importante</em> que (vosotros) <em>habléis</em> con el director.<br>
+    Es <em>fundamental</em> que lo <em>hagan</em> ellos solos.
+  </div>
+</div>
+
+<!-- 大标题 -->
+<div style="max-width:820px;margin:0 auto 18px;font-size:1.1rem;font-weight:700;color:var(--green);padding-left:4px;">
+  ● 这个结构用于下列情况：
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title">表示愿望、需求、希望的动词和形容词引导的从句</div>
+  </div>
+  <div class="section-body">
+
+    <div class="verb-list">
+      querer, desear, preferir, necesitar, esperar, lograr, confiar en, conseguir, tener ganas de, hacer falta…
+    </div>
+    <div class="verb-list">
+      <strong><span id="sec-58-adj" style="display:block;position:relative;top:-60px;"></span>形容词：</strong>conveniente, <strong>necesario</strong><span class="annot" style="font-size:0.82rem;">（必要的）</span>, fundamental, importante, <strong>imprescindible</strong>, indispensable, preciso…
+    </div>
+
+    <div class="intensity">
+      <div class="label">语气强度排序（从弱到强）</div>
+      necesario &nbsp;＜&nbsp; preciso &nbsp;＜&nbsp; imprescindible &nbsp;≈&nbsp; indispensable
+      <span class="annot" style="font-size:0.85rem;margin-left:6px;">← 必不可少的，语气和 imprescindible 非常接近</span>
+    </div>
+
+    <table class="struct-table">
+      <tr>
+        <td class="col-subj">(主语+)动词</td>
+        <td class="col-result" rowspan="4">+ que + 使用虚拟式的句子</td>
+      </tr>
+      <tr><td class="col-subj">es + 形容词</td></tr>
+      <tr><td class="col-subj">(me,te,le…) parece + 形容词</td></tr>
+      <tr><td class="col-subj">(主语+) considerar / ver + 形容词</td></tr>
+    </table>
+
+    <div class="examples-block">
+      <div class="ex-pair">
+        <div class="ex"><em>Prefiero</em> que <em>vengáis</em> mañana.</div>
+        <div class="ex">Necesito que me <em>ayudes</em>.</div>
+      </div>
+      <div class="ex-pair">
+        <div class="ex"><em>Espero</em> que <em>acepten</em> mi oferta.</div>
+        <div class="ex">No <em>logro</em> que me <em>hagan</em> caso.</div>
+      </div>
+      <div class="ex">Mis compañeros <em>quieren</em> que me <em>presente</em> al examen.</div>
+      <div class="ex">
+        Es <em>imprescindible</em> que <em>sepáis</em> idiomas.
+        <span class="annot">你们会语言是必不可少的。比较合适</span>
+      </div>
+      <div class="ex">Es <em>conveniente</em> que no <em>salgáis</em> tarde. Es un viaje muy largo.</div>
+      <div class="ex">Me parece <em>importante</em> que nos <em>ayudemos</em> los unos a los otros.</div>
+      <div class="ex">
+        Al gobierno le parece <em>imprescindible</em> que <em>suban</em> los impuestos.
+        <span class="annot">对政府来说，提高税收是必不可少的</span>
+      </div>
+      <div class="ex">
+        ¿<em>Consideras</em> necesario que <em>vengamos</em> todos mañana?
+        <span class="annot">你觉得我们明天都来有必要吗？</span>
+      </div>
+      <div class="ex">
+        No veo <em>necesario</em> que <em>vengáis</em> todos.
+        <span class="annot">我不觉得你们所有人都必须来</span>
+      </div>
+    </div>
+
+    <!-- 词义补充 -->
+    <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">lograr &nbsp;<span style="font-weight:400;color:var(--muted);">设法做到、达成、实现</span></div>
+        <div class="ex" style="margin-top:5px;">No <em>logro</em> que mi hijo <em>coma</em> verduras. <span class="annot">我没法让我儿子吃蔬菜</span></div>
+        <div class="ex">No <em>logro</em> que me <em>hagan</em> caso. <span class="annot">我没法让他们听我的</span></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">confiar en &nbsp;<span style="font-weight:400;color:var(--muted);">信任、信赖、希望</span></div>
+        <div class="ex" style="margin-top:5px;"><em>Confío</em> en que todo <em>salga</em> bien. <span class="annot">我希望一切都会顺利</span></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">conseguir &nbsp;<span style="font-weight:400;color:var(--muted);">得到、获得、促使某人做某事</span></div>
+        <div class="ex" style="margin-top:5px;">No <em>consigo</em> que él me <em>escuche</em>. <span class="annot">我没法让他听我的话</span></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">tener ganas de &nbsp;<span style="font-weight:400;color:var(--muted);">渴望、很想</span></div>
+        <div class="ex" style="margin-top:5px;">Tengo ganas de que <em>vengas</em> a mi fiesta. <span class="annot">我很想让你来参加我的派对</span></div>
+        <div class="ex">Mi novia tiene ganas de que <em>cenemos</em> juntos. <span class="annot">我女朋友很想让我们一起吃晚饭</span></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">hacer falta &nbsp;<span style="font-weight:400;color:var(--muted);">需要、必要</span></div>
+        <div class="ex" style="margin-top:5px;">Hace falta que <em>estudies</em> más. <span class="annot">你需要多学习</span></div>
+        <div class="ex">No hace falta que <em>vengas</em> mañana. <span class="annot">你明天不需要过来</span></div>
+        <div class="ex">Me hace falta <em>estudiar</em> más. <span class="annot">主语相同时不用 que，直接接不定式</span></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">preciso &nbsp;<span style="font-weight:400;color:var(--muted);">必要的（语气强于 necesario）</span></div>
+        <div class="ex" style="margin-top:5px;">Es <em>preciso</em> que <em>vengas</em> mañana. <span class="annot">明天你必须来</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title">表示忠告、命令、建议的动词和短语引导的从句</div>
+  </div>
+  <div class="section-body">
+
+    <div class="verb-list">
+      aconsejar, decir, exigir, ordenar, recomendar, sugerir<span class="annot">（建议）</span>, permitir
+    </div>
+    <div class="verb-list">
+      <strong>短语：</strong>más vale <span class="annot">最好</span>&nbsp;&nbsp;·&nbsp;&nbsp; es mejor, lo mejor es
+    </div>
+
+    <table class="struct-table">
+      <tr>
+        <td class="col-subj">(主语+)动词</td>
+        <td class="col-result" rowspan="3">+ que + 使用虚拟式的句子</td>
+      </tr>
+      <tr><td class="col-subj">más vale</td></tr>
+      <tr><td class="col-subj">es mejor / lo mejor es</td></tr>
+    </table>
+
+    <div class="examples-block">
+      <div class="ex">
+        <em>Permítame</em> que le <em>recomiende</em> la carne.
+        <span class="annot">请允许我向您推荐这道肉菜</span>
+      </div>
+      <div class="ex">
+        Es mejor que os <em>acostéis</em> pronto. Mañana tenéis que madrugar.
+        <span class="annot">你们最好早点睡觉。明天你们得早起</span>
+      </div>
+      <div class="ex">
+        Luisa <em>sugiere</em> que <em>reservemos</em> el vuelo ya.
+        <span class="annot">路易莎建议我们现在订机票</span>
+      </div>
+      <div class="ex">–¿Dónde quedamos? –Lo mejor es que <em>quedemos</em> en la puerta del cine.</div>
+      <div class="ex">
+        Más vale que <em>ahorres</em> para este verano.
+        <span class="annot">你最好为今年夏天存钱</span>
+      </div>
+    </div>
+
+    <!-- 词义补充 -->
+    <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">decir &nbsp;<span style="font-weight:400;color:var(--muted);"><span id="sec-58-decir" style="display:block;position:relative;top:-60px;"></span>此处表示"让、叫"（命令含义）</span></div>
+        <div class="ex" style="margin-top:5px;">El jefe <em>dice</em> que <em>trabajemos</em> más rápido. <span class="annot">老板让我们工作快一点</span></div><div class="contrast-insert"><div class="ci-hdr" style="background:#1a3f7a;">⚠️ 对比：decir + 陈述式（转述事实）vs decir + 虚拟式（传达命令）</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">decir + 陈述式 → 他说……（转述事实）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El jefe dice que <b>trabajan</b> bien.</p><p style="font-size:0.73rem;color:#1a3f7a;">老板说他们工作得很好。（转述）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me dice que <b>está</b> cansado.</p><p style="font-size:0.73rem;color:#1a3f7a;">他跟我说他很累。（转述）</p></div><div class="ci-side" style="background:#fdecea;"><div class="sl" style="color:#9b2020;">decir + 虚拟式 → 他让……（传达命令）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El jefe dice que <b>trabajemos</b> más rápido.</p><p style="font-size:0.73rem;color:#1a3f7a;">老板让我们工作快一点。（命令）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me dice que <b>llame</b> mañana.</p><p style="font-size:0.73rem;color:#1a3f7a;">他让我明天打电话。（命令）</p></div></div><div class="ci-note">口诀：把 <em>decir</em> 换成中文——"他<strong>说</strong>……" → 陈述式 ／ "他<strong>让</strong>……" → 虚拟式</div></div></div>
+      </div>
+
+      <div style="background:#f7f6f2;border-radius:8px;padding:10px 14px;border-left:3px solid var(--green-mid);">
+        <div style="font-weight:700;color:var(--green);font-size:0.95rem;">exigir &nbsp;<span style="font-weight:400;color:var(--muted);">要求（语气强硬）</span></div>
+        <div class="ex" style="margin-top:5px;">El profesor <em>exige</em> que <em>entreguemos</em> el trabajo hoy. <span class="annot">老师要求我们今天交作业</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title">表示要求、请求的动词引导的从句</div>
+  </div>
+  <div class="section-body">
+
+    <div class="verb-list">
+      pedir, rogar, suplicar
+      <span class="annot" style="margin-left:8px;">请求、恳求</span>
+    </div>
+
+    <div class="formula-tag">(主语+) me, te, le… + 动词 + que + 使用虚拟式的句子</div>
+
+    <div class="examples-block">
+      <div class="ex">
+        Le <em>ruego</em> que no <em>fume</em> aquí.
+        <span class="annot">我恳请您不要在这里吸烟</span>
+      </div>
+      <div class="ex">
+        Te <em>suplico</em> que me <em>ayudes</em>. Estoy desesperado.
+        <span class="annot">我恳求你帮帮我。我快绝望了</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title">表示允许、强迫和致歉的动词引导的从句</div>
+  </div>
+  <div class="section-body">
+
+    <div class="verb-list">
+      dejar, hacer, perdonar, disculpar, permitir, sentir
+    </div>
+
+    <div class="formula-tag">(主语+) 动词 + que + 使用虚拟式的句子</div>
+
+    <div class="examples-block">
+      <div class="ex">
+        Mis padres no me <em>dejan</em> que <em>fume</em>.
+      </div>
+      <div class="ex">
+        <em>Disculpe</em> que no me <em>levante</em>. No me encuentro bien.
+        <span class="annot">我为没有起来向您道歉，我不太舒服</span>
+      </div>
+      <div class="ex">
+        ¿Me <em>permites</em> que te <em>haga</em> una sugerencia?
+        <span class="annot">你允许我给你提个建议吗？</span>
+      </div>
+      <div class="ex">
+        <em>Perdona</em> que te <em>llame</em> a estas horas.
+      </div>
+      <div class="ex">
+        Siempre <em>haces</em> que me <em>sienta</em> mal.
+        <span class="annot">你总是让我感觉不舒服</span>
+        &nbsp;·&nbsp; <span style="color:#6a1b9a;font-style:normal;font-size:0.88rem;font-weight:700;"><span id="sec-58-hacer" style="display:block;position:relative;top:-60px;"></span>haces que → 让/使</span>
+      </div>
+      <div class="ex"><div class="contrast-insert"><div class="ci-hdr" style="background:#1a3f7a;">⚠️ 对比：hacer + que 的两种身份</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">hacer que → 使/让（强迫，第58课）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siempre <b>haces</b> que me <b>sienta</b> mal.</p><p style="font-size:0.73rem;color:#1a3f7a;">你总是让我感觉不舒服。</p><p style="font-size:0.71rem;color:#777;font-style:normal;">← hacer = 强迫/使得，宾语是被影响的人（me）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">El frío <b>hace</b> que la gente <b>se quede</b> en casa.</p><p style="font-size:0.73rem;color:#1a3f7a;">寒冷使人待在家里。</p><p style="font-size:0.73rem;color:#555;margin-top:6px;">结构：主语 + hacer + que + 从句（虚拟式）<br>从句主语≠主句主语</p></div><div class="ci-side" style="background:#fdf5dc;"><div class="sl" style="color:#7a5200;">me hace + 名词 → 触发感受（固定结构，第59课）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me <b>hace gracia</b> que siempre lo <b>confunda</b>.</p><p style="font-size:0.73rem;color:#1a3f7a;">他老是搞混，我觉得好好笑。</p><p style="font-size:0.71rem;color:#777;font-style:normal;">← hacer gracia = 觉得好笑，hace 是类 gustar 动词</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Me <b>hace ilusión</b> que <b>vengas</b> a la boda.</p><p style="font-size:0.73rem;color:#1a3f7a;">你能来婚礼，我好期待。</p><p style="font-size:0.73rem;color:#555;margin-top:6px;">结构：me/te/le + hacer + 名词 + que + 从句（虚拟式）<br>me 是间接宾语，从句是主语</p></div></div><div class="ci-note">关键区分：<em>haces que me sienta</em>（<strong>你</strong>是主语，你在强迫/影响我） vs <em>me hace gracia que…</em>（<strong>从句事件</strong>是主语，它触发了我的感受）。前者是意志类动词，后者是 gustar 类动词，主语位置完全不同。</div></div></div>
+        <div class="contrast-insert"><div class="ci-hdr" style="background:#1a3f7a;">⚠️ 对比：sentir + 陈述式（感知到事实）vs sentir + 虚拟式（遗憾/致歉）</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">sentir + 陈述式 → 我感觉到……（perceive）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que <b>estás</b> cansado.</p><p style="font-size:0.73rem;color:#1a3f7a;">我感觉到你很累。（你确实累了）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que algo <b>va</b> mal.</p><p style="font-size:0.73rem;color:#1a3f7a;">我感觉有什么地方不对。</p></div><div class="ci-side" style="background:#fdecea;"><div class="sl" style="color:#9b2020;">sentir + 虚拟式 → 我很遗憾……（regret）</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que no te <b>guste</b> mi regalo.</p><p style="font-size:0.73rem;color:#1a3f7a;">我很遗憾你不喜欢我的礼物。</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;">Siento que no <b>podáis</b> venir.</p><p style="font-size:0.73rem;color:#1a3f7a;">我很遗憾你们不能来。</p></div></div><div class="ci-note">口诀："我<strong>感觉到</strong>……" → 陈述式 ／ "我<strong>遗憾/抱歉</strong>……" → 虚拟式</div></div></div><em>Siento</em> que no te <em>guste</em> mi regalo.
+        <span class="annot">我很遗憾你不喜欢我的礼物</span>
+        &nbsp;·&nbsp; <span style="color:#6a1b9a;font-style:normal;font-size:0.88rem;font-weight:700;"><span id="sec-58-sentir" style="display:block;position:relative;top:-60px;"></span>Siento que → 表示遗憾/情感</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="key-rule" style="border-color:var(--green);background:var(--green-light);">
+  <div class="kr-title" style="color:var(--green);">📌 四种触发虚拟式的情景总结</div>
+  <div class="kr-body" style="color:#333;">
+    <strong>① 愿望/需求/希望</strong>：querer / necesitar / es importante… + que + 虚拟式<br>
+    <strong>② 忠告/命令/建议</strong>：aconsejar / más vale / es mejor… + que + 虚拟式<br>
+    <strong>③ 要求/请求</strong>：pedir / rogar / suplicar + que + 虚拟式<br>
+    <strong>④ 允许/强迫/致歉</strong>：dejar / hacer / disculpar / sentir + que + 虚拟式
+  </div>
+</div>
+
+
+
+<div class="lesson-divider l59" id="lesson-59"><div class="num">59</div><div class="info"><h2>情感动词 · 固定结构 · 评价句型</h2><p>Verbos de emoción · Estructuras fijas · Valoración</p></div></div>
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="lesson-num">第 59 课</div>
+  <h1>¿Te molesta que fume? · Me pone nervioso que grites.</h1>
+  <h2>虚拟式现在时（3）· Presente de Subjuntivo (3)</h2>
+</div>
+
+<!-- CORE RULE -->
+<div class="core-rule">
+  <div class="label">核心句型</div>
+  <div class="formula">陈述式现在时 + que + 虚拟式现在时</div>
+  <div class="examples">
+    ¿Te molesta que <em>fume</em>? &nbsp;·&nbsp; Me pone nervioso que <em>grites</em>.<br>
+    <span class="annot">你介意我抽烟吗？ · Do you mind if I smoke? &nbsp;|&nbsp; 你大喊大叫让我很紧张。· Your shouting makes me nervous.</span>
+    Es preocupante que se <em>niegue</em> a estudiar.
+    <span class="annot">他/她拒绝学习让人担心。· It's worrying that he/she refuses to study.</span>
+  </div>
+</div>
+
+<!-- KEY RULE BANNER -->
+<div class="key-rule">
+  <div class="kr-title">⚡ 使用条件</div>
+  <div class="kr-body">
+    当<strong>主从句主语不同</strong>，或主句是<strong>无人称句</strong>时，从句使用虚拟式现在时，可以指现在或将来。
+  </div>
+</div>
+
+<!-- SECTION 1: 感情动词 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-icon">💬</span>
+    <span class="section-title">一、表达感情的动词和短语引导的从句</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:0.95rem;color:var(--muted);margin-bottom:14px;">意外、高兴、愉快、不满、惊讶、害怕、生气、忧虑、疑问等情感</p>
+
+    <!-- 类型1 -->
+    <div class="category">
+      <span class="cat-label">类型 A</span>
+      <div class="formula-tag">动词 + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex">Siento que no <em>podáis</em> venir a mi fiesta.</div>
+        <div class="trans"><span class="zh">我很遗憾你们不能来我的聚会。</span> &nbsp;·&nbsp; <span class="en">I'm sorry you can't come to my party.</span></div>
+
+        <div class="ex">Lo intentaré, pero <em>dudo</em> que lo <em>termine</em> para el viernes.</div>
+        <div class="trans"><span class="zh">我会试的，但我怀疑能在周五前完成。</span> &nbsp;·&nbsp; <span class="en">I'll try, but I doubt I'll finish it by Friday.</span></div>
+
+        <div class="ex">Marta está encantada de que <em>quieras</em> ayudarla.</div>
+        <div class="trans"><span class="zh">玛尔塔非常高兴你愿意帮她。</span> &nbsp;·&nbsp; <span class="en">Marta is delighted that you want to help her.</span></div>
+
+        <div class="ex">Tenemos miedo de que no nos <em>entiendan</em>.</div>
+        <div class="trans"><span class="zh">我们害怕他们不理解我们。</span> &nbsp;·&nbsp; <span class="en">We're afraid they won't understand us.</span></div>
+      </div>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">agradecer</span>
+          <span class="verb-zh">感谢，对…感激</span>
+          <span class="verb-en">to be grateful / to appreciate</span>
+          <span class="verb-ex"><em>Agradezco que <b>hayas</b> venido.</em></span>
+          <span class="verb-ex-tr">谢谢你来了。· I'm grateful you came.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">dudar</span>
+          <span class="verb-zh">怀疑，不相信</span>
+          <span class="verb-en">to doubt</span>
+          <span class="verb-ex"><em>Dudo que <b>llegue</b> a tiempo.</em></span>
+          <span class="verb-ex-tr">我怀疑他能准时到。· I doubt he'll arrive on time.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">odiar</span>
+          <span class="verb-zh">憎恨，讨厌</span>
+          <span class="verb-en">to hate</span>
+          <span class="verb-ex"><em>Odio que <b>fumen</b> en casa.</em></span>
+          <span class="verb-ex-tr">我讨厌他们在家里抽烟。· I hate that they smoke at home.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">reprochar</span>
+          <span class="verb-zh">责备，埋怨</span>
+          <span class="verb-en">to reproach</span>
+          <span class="verb-ex"><em>Le reprocho que no <b>llame</b> nunca.</em></span>
+          <span class="verb-ex-tr">我责怪他从不打电话。· I reproach him for never calling.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">sentir</span>
+          <span class="verb-zh">遗憾，感到抱歉</span>
+          <span class="verb-en">to be sorry / to regret</span>
+          <span class="verb-ex"><em>Siento que no <b>puedas</b> venir.</em></span>
+          <span class="verb-ex-tr">我很遗憾你不能来。· I'm sorry you can't come.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">soportar</span>
+          <span class="verb-zh">忍受，受得了</span>
+          <span class="verb-en">to stand / to tolerate</span>
+          <span class="verb-ex"><em>No soporto que <b>hables</b> tan alto.</em></span>
+          <span class="verb-ex-tr">我受不了你说话这么大声。· I can't stand you talking so loudly.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">estar contento de</span>
+          <span class="verb-zh">对…感到高兴</span>
+          <span class="verb-en">to be happy about</span>
+          <span class="verb-ex"><em>Estoy contento de que <b>estés</b> aquí.</em></span>
+          <span class="verb-ex-tr">我很高兴你在这里。· I'm happy that you're here.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">estar encantado de</span>
+          <span class="verb-zh">对…感到非常高兴</span>
+          <span class="verb-en">to be delighted about</span>
+          <span class="verb-ex"><em>Estoy encantado de que <b>vengas</b> a cenar.</em></span>
+          <span class="verb-ex-tr">我非常高兴你来吃晚饭。· I'm delighted you're coming for dinner.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">tener miedo de</span>
+          <span class="verb-zh">害怕，担心</span>
+          <span class="verb-en">to be afraid of</span>
+          <span class="verb-ex"><em>Tengo miedo de que <b>suspenda</b> el examen.</em></span>
+          <span class="verb-ex-tr">我怕他考试不及格。· I'm afraid he'll fail the exam.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 类型2 -->
+    <div class="contrast-insert"><div class="ci-hdr" style="background:#7a5200;">⚠️ 核心对比：类型A vs 类型B — 谁是主语？</div><div class="ci-body"><div class="ci-sides s2"><div class="ci-side" style="background:#e6f4ec;"><div class="sl" style="color:#1a5c38;">Tipo A：说话者是主语，我主动感受</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Siento</b> que no <b>podáis</b> venir.</p><p style="font-size:0.73rem;color:#1a3f7a;">我（Yo siento）很遗憾你们不能来</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Odio</b> que <b>fumen</b> en casa.</p><p style="font-size:0.73rem;color:#1a3f7a;">我（Yo odio）讨厌他们在家里抽烟</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Dudo</b> que <b>llegue</b> a tiempo.</p><p style="font-size:0.73rem;color:#1a3f7a;">我（Yo dudo）怀疑他能准时到</p></div><div class="ci-side" style="background:#fdf5dc;"><div class="sl" style="color:#7a5200;">Tipo B：事物/从句 是主语，触发说话者的感觉</div><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Me alegra</b> que <b>estés</b> mejor.</p><p style="font-size:0.73rem;color:#1a3f7a;">你好多了这件事让我高兴（主语=从句）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Me molesta</b> que <b>fumen</b> en casa.</p><p style="font-size:0.73rem;color:#1a3f7a;">他们抽烟这件事烦到我（主语=从句）</p><p style="font-family:Lora,serif;font-style:italic;font-size:0.86rem;"><b>Me preocupa</b> que <b>llegues</b> solo.</p><p style="font-size:0.73rem;color:#1a3f7a;">你一个人回来让我担心（主语=从句）</p></div></div><div class="ci-note">类型B的本质 = <em>gustar</em> 逻辑：<em>Me gusta el cafe</em>（咖啡是主语）→ <em>Me molesta que fumen</em>（从句是主语）。这就是为什么类型B动词永远第三人称单数，不随我/你/他变位。</div></div></div>
+<div class="category">
+      <span class="cat-label">类型 B</span>
+      <div class="formula-tag">me / te / le… + 动词 + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex-pair">
+          <div>
+            <div class="ex">¡Cuánto <em>me alegro</em> de que <em>estéis</em> todos bien!</div>
+            <div class="trans"><span class="zh">你们大家都好，我真是太高兴了！</span><br><span class="en">How glad I am that you're all well!</span></div>
+          </div>
+          <div>
+            <div class="ex">¿Te <em>importa</em> que <em>venga</em> Carlos?</div>
+            <div class="trans"><span class="zh">你介意卡洛斯来吗？</span><br><span class="en">Do you mind if Carlos comes?</span></div>
+          </div>
+        </div>
+
+        <!-- 重点解析：¿Te importa que venga Carlos? -->
+        <div style="background:var(--accent-light);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:8px 12px;margin:6px 0 10px;font-size:0.88rem;">
+          <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">💡 重点解析 · ¿Te importa que venga Carlos?</div>
+          <div style="line-height:1.8;color:#333;">
+            <strong>1. <em>importar</em> 是无人称动词</strong>，与 <em>gustar</em> 用法相同：语法主语是后面的从句，而非"你"。<br>
+            &nbsp;&nbsp;&nbsp;→ <em>A mí <strong>me</strong> importa / A ti <strong>te</strong> importa / A él <strong>le</strong> importa</em><br><br>
+            <strong>2. 从句使用虚拟式</strong>：情感动词（<em>importar、gustar、molestar…</em>）之后，从句谓语须用虚拟式。<br>
+            &nbsp;&nbsp;&nbsp;✔ <em>¿Te importa que <strong>venga</strong>?</em>（虚拟式）&nbsp;&nbsp;
+            ✘ <em>¿Te importa que <strong>viene</strong>?</em>（陈述式，误）<br><br>
+            <strong>3. 主语后置</strong>：<em>Carlos</em> 置于句末，为西班牙语常见结构，将新信息放在句尾以示强调。
+          </div>
+        </div>
+
+        <div class="ex-pair">
+          <div>
+            <div class="ex">Me <em>preocupa</em> que <em>sean</em> tan maleducados.</div>
+            <div class="trans"><span class="zh">他们这么没礼貌让我很担心。</span><br><span class="en">It worries me that they're so rude.</span></div>
+          </div>
+          <div>
+            <div class="ex">Les <em>irrita</em> que <em>cantes</em>.</div>
+            <div class="trans"><span class="zh">你唱歌让他们感到烦恼。</span><br><span class="en">It irritates them that you sing.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">admirar</span><span class="verb-zh">使钦佩</span><span class="verb-en">to admire</span>
+          <span class="verb-ex"><em>Me <b>admira</b> que <b>sepa</b> tantos idiomas.</em></span>
+          <span class="verb-ex-tr">他会这么多语言，真让我佩服。· It amazes me that he knows so many languages.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">agobiar</span><span class="verb-zh">使烦恼，压垮</span><span class="verb-en">to overwhelm / to stress out</span>
+          <span class="verb-ex"><em>Me <b>agobia</b> que <b>haya</b> tanto trabajo.</em></span>
+          <span class="verb-ex-tr">这么多工作压得我喘不过气。· It overwhelms me that there's so much work.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">agradar</span><span class="verb-zh">使满意，令人高兴</span><span class="verb-en">to please</span>
+          <span class="verb-ex"><em>Me <b>agrada</b> que <b>seas</b> tan amable.</em></span>
+          <span class="verb-ex-tr">你这么亲切让我很开心。· It pleases me that you're so kind.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">alegrar</span><span class="verb-zh">使高兴</span><span class="verb-en">to gladden / to cheer up</span>
+          <span class="verb-ex"><em>Me <b>alegra</b> que <b>estés</b> mejor.</em></span>
+          <span class="verb-ex-tr">你好多了，我很高兴。· It makes me happy that you're feeling better.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">alegrarse de</span><span class="verb-zh">为…感到高兴</span><span class="verb-en">to be glad about</span>
+          <span class="verb-ex"><em>Me <b>alegro</b> de que <b>hayas</b> aprobado.</em></span>
+          <span class="verb-ex-tr">你通过了，我真为你高兴。· I'm glad you passed.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">asombrar</span><span class="verb-zh">使惊讶，使惊叹</span><span class="verb-en">to astonish</span>
+          <span class="verb-ex"><em>Me <b>asombra</b> que <b>coma</b> tan poco.</em></span>
+          <span class="verb-ex-tr">他吃这么少，真让我惊讶。· It astonishes me that he eats so little.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">asustar</span><span class="verb-zh">吓到，使害怕</span><span class="verb-en">to frighten / to scare</span>
+          <span class="verb-ex"><em>Me <b>asusta</b> que <b>conduzca</b> tan rápido.</em></span>
+          <span class="verb-ex-tr">他开车这么快把我吓到了。· It scares me that he drives so fast.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">desagradar</span><span class="verb-zh">使不满意，令人不快</span><span class="verb-en">to displease</span>
+          <span class="verb-ex"><em>Me <b>desagrada</b> que <b>llegues</b> siempre tarde.</em></span>
+          <span class="verb-ex-tr">你总是迟到让我很不高兴。· It displeases me that you're always late.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">disgustar</span><span class="verb-zh">使厌恶，令人不快</span><span class="verb-en">to upset / to displease</span>
+          <span class="verb-ex"><em>Me <b>disgusta</b> que <b>mienta</b> tanto.</em></span>
+          <span class="verb-ex-tr">他这么爱说谎让我很反感。· It upsets me that he lies so much.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">divertir</span><span class="verb-zh">使开心，逗乐</span><span class="verb-en">to amuse / to entertain</span>
+          <span class="verb-ex"><em>Me <b>divierte</b> que <b>baile</b> tan mal.</em></span>
+          <span class="verb-ex-tr">他跳舞那么差，我觉得好好笑。· It amuses me that he dances so badly.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">doler</span><span class="verb-zh">让人心痛，感到痛苦</span><span class="verb-en">to hurt / to pain</span>
+          <span class="verb-ex"><em>Me <b>duele</b> que no <b>confíes</b> en mí.</em></span>
+          <span class="verb-ex-tr">你不信任我，这让我很伤心。· It hurts me that you don't trust me.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">encantar</span><span class="verb-zh">非常喜欢，爱</span><span class="verb-en">to love / to adore</span>
+          <span class="verb-ex"><em>Me <b>encanta</b> que <b>cocines</b> tan bien.</em></span>
+          <span class="verb-ex-tr">我超喜欢你做饭这么好吃。· I love that you cook so well.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">enorgullecer</span><span class="verb-zh">使自豪</span><span class="verb-en">to make proud</span>
+          <span class="verb-ex"><em>Me <b>enorgullece</b> que <b>hayas</b> ganado.</em></span>
+          <span class="verb-ex-tr">你赢了，我真为你骄傲。· It makes me proud that you won.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">extrañar</span><span class="verb-zh">觉得奇怪，想念</span><span class="verb-en">to find strange / to miss</span>
+          <span class="verb-ex"><em>Me <b>extraña</b> que no <b>haya</b> llamado.</em></span>
+          <span class="verb-ex-tr">他没打电话，我觉得很奇怪。· I find it strange that he hasn't called.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es"><strong>gustar</strong></span><span class="verb-zh">喜欢</span><span class="verb-en">to like</span>
+          <span class="verb-ex"><em>Me <b>gusta</b> que <b>seas</b> tan sincero.</em></span>
+          <span class="verb-ex-tr">我喜欢你这么真诚。· I like that you're so sincere.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">horrorizar</span><span class="verb-zh">使恐惧，使厌恶</span><span class="verb-en">to horrify</span>
+          <span class="verb-ex"><em>Me <b>horroriza</b> que <b>tiren</b> basura en la calle.</em></span>
+          <span class="verb-ex-tr">他们在街上乱扔垃圾，真让我觉得恶心。· It horrifies me that they throw rubbish on the street.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">importar</span><span class="verb-zh">在意，介意</span><span class="verb-en">to matter / to mind</span>
+          <span class="verb-ex"><em>¿Te <b>importa</b> que <b>abra</b> la ventana?</em></span>
+          <span class="verb-ex-tr">你介意我开窗吗？· Do you mind if I open the window?</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">inquietar</span><span class="verb-zh">使不安，使忧虑</span><span class="verb-en">to worry / to unsettle</span>
+          <span class="verb-ex"><em>Me <b>inquieta</b> que no <b>coma</b> nada.</em></span>
+          <span class="verb-ex-tr">他什么都不吃让我很担心。· It worries me that he's not eating anything.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">irritar</span><span class="verb-zh">使恼怒，激怒</span><span class="verb-en">to irritate / to annoy</span>
+          <span class="verb-ex"><em>Me <b>irrita</b> que <b>interrumpas</b> siempre.</em></span>
+          <span class="verb-ex-tr">你老是打断别人，真让我烦。· It irritates me that you always interrupt.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">maravillarse de</span><span class="verb-zh">对…感到惊叹</span><span class="verb-en">to marvel at</span>
+          <span class="verb-ex"><em>Me <b>maravillo</b> de que <b>recuerde</b> todo.</em></span>
+          <span class="verb-ex-tr">他记得所有事情，真让我叹为观止。· I marvel that he remembers everything.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es"><strong>molestar</strong></span><span class="verb-zh">打扰，烦恼</span><span class="verb-en">to bother / to annoy</span>
+          <span class="verb-ex"><em>¿Te <b>molesta</b> que <b>ponga</b> música?</em></span>
+          <span class="verb-ex-tr">你介意我放音乐吗？· Does it bother you if I put on music?</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">ofender</span><span class="verb-zh">冒犯，触怒</span><span class="verb-en">to offend</span>
+          <span class="verb-ex"><em>Le <b>ofende</b> que la gente no lo <b>salude</b>.</em></span>
+          <span class="verb-ex-tr">别人不跟他打招呼，他就会生气。· He's offended that people don't greet him.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es"><strong>preocupar</strong></span><span class="verb-zh">使担心，使烦恼</span><span class="verb-en">to worry</span>
+          <span class="verb-ex"><em>Me <b>preocupa</b> que <b>llegues</b> solo de noche.</em></span>
+          <span class="verb-ex-tr">你一个人晚上回来，我很担心。· It worries me that you come home alone at night.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">repugnar</span><span class="verb-zh">使厌恶，令人反感</span><span class="verb-en">to disgust / to repel</span>
+          <span class="verb-ex"><em>Me <b>repugna</b> que <b>traten</b> así a los animales.</em></span>
+          <span class="verb-ex-tr">他们这样对待动物，真让我觉得恶心。· It disgusts me that they treat animals that way.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">reventar</span><span class="verb-zh">使气炸，极度烦恼</span><span class="verb-en">to infuriate / to drive mad</span>
+          <span class="verb-ex"><em>Me <b>revienta</b> que <b>llegue</b> siempre tarde.</em></span>
+          <span class="verb-ex-tr">他每次都迟到，把我气死了。· It drives me mad that he's always late.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">sonrojar</span><span class="verb-zh">使脸红</span><span class="verb-en">to make blush</span>
+          <span class="verb-ex"><em>Me <b>sonroja</b> que <b>digan</b> eso delante de todos.</em></span>
+          <span class="verb-ex-tr">他们当着大家的面说那种话，让我脸红。· It makes me blush that they say that in front of everyone.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">sorprender</span><span class="verb-zh">使惊讶</span><span class="verb-en">to surprise</span>
+          <span class="verb-ex"><em>Me <b>sorprende</b> que no <b>sepa</b> nada.</em></span>
+          <span class="verb-ex-tr">他什么都不知道，真让我惊讶。· It surprises me that he knows nothing.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">sorprenderse de</span><span class="verb-zh">对…感到惊讶</span><span class="verb-en">to be surprised at</span>
+          <span class="verb-ex"><em>Me <b>sorprendo</b> de que <b>haya</b> tanta gente.</em></span>
+          <span class="verb-ex-tr">有这么多人，我真没想到。· I'm surprised that there are so many people.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 类型3 -->
+    <div class="category">
+      <span class="cat-label">类型 C &nbsp; <span id="sec-59-typeC" style="display:block;position:relative;top:-60px;"></span>ser / parecer / resultar</span>
+      <div class="formula-tag">es / (me,te,le…) parece / resulta + 形容词 + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex">Es <em>sorprendente</em> que <em>esté</em> aquí y no <em>venga</em> a vernos.</div>
+        <div class="trans"><span class="zh">他/她在这里却不来看我们，真令人惊讶。</span> &nbsp;·&nbsp; <span class="en">It's surprising that he/she is here and doesn't come to see us.</span></div>
+
+        <div class="ex">Me parece <em>raro</em> que Julia no <em>quiera</em> salir.</div>
+        <div class="trans"><span class="zh">我觉得胡利娅不想出去很奇怪。</span> &nbsp;·&nbsp; <span class="en">It seems strange to me that Julia doesn't want to go out.</span></div>
+
+        <div class="ex">Me parece <em>extraño</em> que no <em>quieran</em> llegar a ningún acuerdo.</div>
+        <div class="trans"><span class="zh">他们不想达成任何协议，我觉得很奇怪。</span> &nbsp;·&nbsp; <span class="en">It seems strange to me that they don't want to reach any agreement.</span></div>
+
+        <div class="ex">Diego se porta a veces como un niño. Parece mentira que <em>sea</em> tan infantil.</div>
+        <div class="trans"><span class="zh">迭戈有时表现得像个孩子。他这么幼稚，简直难以置信。</span> &nbsp;·&nbsp; <span class="en">Diego sometimes behaves like a child. It's hard to believe he's so childish.</span></div>
+      </div>
+      <div class="verb-grid">
+        <div class="verb-item"><span class="verb-es">admirable</span><span class="verb-zh">令人钦佩的</span><span class="verb-en">admirable</span></div>
+        <div class="verb-item"><span class="verb-es">curioso</span><span class="verb-zh">奇怪的，有趣的</span><span class="verb-en">curious / strange</span></div>
+        <div class="verb-item"><span class="verb-es">asombroso</span><span class="verb-zh">令人惊讶的</span><span class="verb-en">astonishing</span></div>
+        <div class="verb-item"><span class="verb-es">extraño</span><span class="verb-zh">奇怪的</span><span class="verb-en">strange</span></div>
+        <div class="verb-item"><span class="verb-es">horroroso</span><span class="verb-zh">可怕的，恐怖的</span><span class="verb-en">horrible / dreadful</span></div>
+        <div class="verb-item"><span class="verb-es">increíble</span><span class="verb-zh">难以置信的</span><span class="verb-en">incredible</span></div>
+        <div class="verb-item"><span class="verb-es">inquietante</span><span class="verb-zh">令人不安的</span><span class="verb-en">worrying / unsettling</span></div>
+        <div class="verb-item"><span class="verb-es">preocupante</span><span class="verb-zh">令人担忧的</span><span class="verb-en">concerning / worrying</span></div>
+        <div class="verb-item"><span class="verb-es">repugnante</span><span class="verb-zh">令人厌恶的</span><span class="verb-en">repugnant / disgusting</span></div>
+        <div class="verb-item"><span class="verb-es">sorprendente</span><span class="verb-zh">令人惊讶的</span><span class="verb-en">surprising</span></div>
+        <div class="verb-item"><span class="verb-es">raro</span><span class="verb-zh">奇怪的，少见的</span><span class="verb-en">strange / weird / rare</span></div>
+        <div class="verb-item"><span class="verb-es"><strong>parecer mentira</strong></span><span class="verb-zh">难以置信，简直不敢相信</span><span class="verb-en">to seem unbelievable</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: 固定结构 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-icon">🔧</span>
+    <span class="section-title">二、固定动词结构（me, te, le… +）</span>
+  </div>
+  <div class="section-body">
+
+    <table class="struct-table">
+      <tr>
+        <td class="col-subj" rowspan="5">me / te / le…</td>
+        <td class="col-mid">da / llena de + 名词</td>
+        <td class="col-result" rowspan="5">+ que + 虚拟式</td>
+      </tr>
+      <tr><td class="col-mid">pone de + 名词</td></tr>
+      <tr><td class="col-mid">pone + 形容词</td></tr>
+      <tr><td class="col-mid">hace + 名词</td></tr>
+      <tr><td class="col-mid">saca de + 名词</td></tr>
+    </table>
+
+    <div class="verb-grid">
+
+      <!-- dar + 名词 -->
+      <div class="verb-item">
+        <span class="verb-es">dar alegría</span><span class="verb-zh">带来快乐</span><span class="verb-en">to bring joy</span>
+        <span class="verb-ex"><em>Me <b>da alegría</b> que <b>vengas</b> a visitarme.</em></span>
+        <span class="verb-ex-tr">你来看我，我真的很开心。· It brings me joy that you come to visit me.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar tristeza</span><span class="verb-zh">令人悲伤</span><span class="verb-en">to make sad</span>
+        <span class="verb-ex"><em>Me <b>da tristeza</b> que <b>vivas</b> tan lejos.</em></span>
+        <span class="verb-ex-tr">你住这么远，让我很难过。· It makes me sad that you live so far away.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar vergüenza</span><span class="verb-zh">令人羞愧</span><span class="verb-en">to make ashamed</span>
+        <span class="verb-ex"><em>Me <b>da vergüenza</b> que me <b>vean</b> así.</em></span>
+        <span class="verb-ex-tr">被人这样看到我，真的很丢脸。· It embarrasses me that they see me like this.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar asco</span><span class="verb-zh">令人恶心</span><span class="verb-en">to disgust</span>
+        <span class="verb-ex"><em>Me <b>da asco</b> que <b>tiren</b> basura al suelo.</em></span>
+        <span class="verb-ex-tr">他们把垃圾扔在地上，真让我恶心。· It disgusts me that they throw rubbish on the floor.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar náuseas</span><span class="verb-zh">令人反胃</span><span class="verb-en">to make nauseous</span>
+        <span class="verb-ex"><em>Me <b>dan náuseas</b> que <b>hablen</b> con la boca llena.</em></span>
+        <span class="verb-ex-tr">他们嘴里含着东西说话，真让我反胃。· It makes me nauseous that they talk with their mouths full.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar miedo</span><span class="verb-zh">令人害怕</span><span class="verb-en">to frighten</span>
+        <span class="verb-ex"><em>Me <b>da miedo</b> que <b>salgas</b> solo de noche.</em></span>
+        <span class="verb-ex-tr">你一个人晚上出去，我很害怕。· It frightens me that you go out alone at night.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">dar pánico</span><span class="verb-zh">令人恐慌</span><span class="verb-en">to terrify</span>
+        <span class="verb-ex"><em>Me <b>da pánico</b> que <b>haya</b> tanto tráfico.</em></span>
+        <span class="verb-ex-tr">路上堵成这样，我都快吓死了。· It terrifies me that there's so much traffic.</span>
+      </div>
+
+      <!-- llenar de -->
+      <div class="verb-item">
+        <span class="verb-es">llenar de alegría</span><span class="verb-zh">充满喜悦</span><span class="verb-en">to fill with joy</span>
+        <span class="verb-ex"><em>Me <b>llena de alegría</b> que <b>hayas</b> aprobado.</em></span>
+        <span class="verb-ex-tr">你通过了，让我充满喜悦。· It fills me with joy that you passed.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">llenar de indignación</span><span class="verb-zh">充满愤慨</span><span class="verb-en">to fill with indignation</span>
+        <span class="verb-ex"><em>Me <b>llena de indignación</b> que <b>mientan</b> así.</em></span>
+        <span class="verb-ex-tr">他们这样撒谎让我义愤填膺。· It fills me with indignation that they lie like that.</span>
+      </div>
+
+      <!-- poner de -->
+      <div class="verb-item">
+        <span class="verb-es">poner de buen humor</span><span class="verb-zh">让人心情好</span><span class="verb-en">to put in a good mood</span>
+        <span class="verb-ex"><em>Me <b>pone de buen humor</b> que <b>haga</b> sol.</em></span>
+        <span class="verb-ex-tr">天气晴朗让我心情特别好。· It puts me in a good mood that it's sunny.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">poner de mal humor</span><span class="verb-zh">让人心情差</span><span class="verb-en">to put in a bad mood</span>
+        <span class="verb-ex"><em>Me <b>pone de mal humor</b> que <b>llegues</b> tarde.</em></span>
+        <span class="verb-ex-tr">你迟到让我心情变差。· It puts me in a bad mood that you arrive late.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">poner triste</span><span class="verb-zh">让人难过</span><span class="verb-en">to make sad</span>
+        <span class="verb-ex"><em>Me <b>pone triste</b> que <b>te vayas</b> tan pronto.</em></span>
+        <span class="verb-ex-tr">你这么快就走，让我很难过。· It makes me sad that you're leaving so soon.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">poner nervioso</span><span class="verb-zh">让人紧张</span><span class="verb-en">to make nervous</span>
+        <span class="verb-ex"><em>Me <b>pone nervioso</b> que <b>grites</b> tanto.</em></span>
+        <span class="verb-ex-tr">你大喊大叫让我很紧张。· It makes me nervous that you shout so much.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">poner histérico</span><span class="verb-zh">让人抓狂/崩溃</span><span class="verb-en">to drive hysterical</span>
+        <span class="verb-ex"><em>Me <b>pone histérico</b> que no <b>escuches</b> nunca.</em></span>
+        <span class="verb-ex-tr">你从来不听我说话，把我逼得快崩溃了。· It drives me hysterical that you never listen.</span>
+      </div>
+
+      <!-- hacer -->
+      <div class="verb-item">
+        <span class="verb-es">hacer gracia</span><span class="verb-zh">觉得有趣/好笑</span><span class="verb-en">to find funny</span>
+        <span class="verb-ex"><em>Me <b>hace gracia</b> que <b>confunda</b> siempre los nombres.</em></span>
+        <span class="verb-ex-tr">他老是搞混名字，我觉得好好笑。· I find it funny that he always mixes up names.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">hacer ilusión</span><span class="verb-zh">感到期待/兴奋</span><span class="verb-en">to feel excited about</span>
+        <span class="verb-ex"><em>Me <b>hace ilusión</b> que <b>vengas</b> a la boda.</em></span>
+        <span class="verb-ex-tr">你能来婚礼，我真的好期待。· I'm so excited that you're coming to the wedding.</span>
+      </div>
+
+      <!-- sacar de -->
+      <div class="verb-item">
+        <span class="verb-es">sacar de quicio</span><span class="verb-zh">让人抓狂</span><span class="verb-en">to drive crazy</span>
+        <span class="verb-ex"><em>Me <b>saca de quicio</b> que <b>deje</b> las puertas abiertas.</em></span>
+        <span class="verb-ex-tr">他老是不关门，真把我搞得抓狂。· It drives me crazy that he leaves the doors open.</span>
+      </div>
+      <div class="verb-item">
+        <span class="verb-es">sacar de mis casillas</span><span class="verb-zh">让我失控/气到爆</span><span class="verb-en">to drive me mad</span>
+        <span class="verb-ex"><em>Me <b>saca de mis casillas</b> que <b>interrumpas</b> siempre.</em></span>
+        <span class="verb-ex-tr">你老是打断我，把我气得要命。· It drives me mad that you always interrupt me.</span>
+      </div>
+
+    </div>
+
+    <div class="examples-block">
+      <div class="ex-pair">
+        <div>
+          <div class="ex">Me <em>da pena</em> que <em>haya</em> tanta miseria.</div>
+          <div class="trans"><span class="zh">有这么多贫困让我感到难过。</span><br><span class="en">It saddens me that there is so much misery.</span></div>
+        </div>
+        <div>
+          <div class="ex">Nos <em>llena de alegría</em> que la gente <em>mejore</em> su nivel de vida.</div>
+          <div class="trans"><span class="zh">人们生活水平提高让我们充满喜悦。</span><br><span class="en">It fills us with joy that people are improving their standard of living.</span></div>
+        </div>
+      </div>
+
+      <div class="ex">A María le <em>pone de mal humor</em> que la casa <em>esté</em> desordenada.</div>
+      <div class="trans"><span class="zh">房子乱了会让玛利亚心情不好。</span> &nbsp;·&nbsp; <span class="en">It puts María in a bad mood that the house is messy.</span></div>
+
+      <div class="ex">¡Calla un poco! ¿No ves que les <em>pone nerviosos</em> que <em>hagas</em> ruido?</div>
+      <div class="trans"><span class="zh">安静一下！你没看到你制造噪音让他们很紧张吗？</span> &nbsp;·&nbsp; <span class="en">Be quiet! Don't you see that making noise makes them nervous?</span></div>
+
+      <div class="ex-pair">
+        <div>
+          <div class="ex">Me <em>hace gracia</em> que el niño <em>sea</em> tan comilón.</div>
+          <div class="trans"><span class="zh">这个孩子这么贪吃，我觉得很有趣。</span><br><span class="en">I find it funny that the child is such a big eater.</span></div>
+        </div>
+        <div>
+          <div class="ex">Me <em>saca de quicio</em> que se <em>rían</em> de la gente.</div>
+          <div class="trans"><span class="zh">他们取笑别人让我抓狂。</span><br><span class="en">It drives me crazy that they laugh at people.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="key-rule" style="border-color:var(--green);background:var(--green-light);">
+  <div class="kr-title" style="color:var(--green);">📌 总结：触发虚拟式的三大结构</div>
+  <div class="kr-body">
+    <strong>① 情感动词</strong>（sentir / dudar / odiar…）+ que + 虚拟式<br>
+    <strong>② 间接宾语动词</strong>（molestar / gustar / preocupar…）+ que + 虚拟式<br>
+    <strong>③ 评价句型</strong>（es extraño / parece mentira / me pone nervioso…）+ que + 虚拟式
+  </div>
+</div>
+
+
+
+<div class="lesson-divider l60" id="lesson-60"><div class="num">60</div><div class="info"><h2>评价短语 · 可能性表达</h2><p>Frases de valoración · Posibilidad</p></div></div>
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="lesson-num">第 60 课</div>
+  <h1>Es una lástima que dejes de trabajar. · Puede que llegue tarde.</h1>
+  <h2>虚拟式现在时（4）· Presente de Subjuntivo (4)</h2>
+</div>
+
+<!-- CORE RULE -->
+<div class="core-rule">
+  <div class="label">核心句型</div>
+  <div class="formula">陈述式现在时 + que + 虚拟式现在时</div>
+  <div class="examples">
+    Me parece bien que <em>protesten</em>. &nbsp;·&nbsp; Es una lástima que <em>dejes</em> de trabajar.<br>
+    <span class="annot">我觉得他们抗议很好。· I think it's good that they protest. &nbsp;|&nbsp; 你辞职真是太可惜了。· It's a shame you're leaving work.</span>
+    No me esperéis para cenar. Puede que <em>llegue</em> tarde.
+    <span class="annot">吃饭别等我了，我可能会来晚。· Don't wait for me for dinner. I might arrive late.</span>
+  </div>
+</div>
+
+<!-- KEY RULE BANNER -->
+<div class="key-rule">
+  <div class="kr-title">⚡ 使用条件</div>
+  <div class="kr-body">
+    当<strong>主从句主语不同</strong>，或主句是<strong>无人称句</strong>时，从句使用虚拟式现在时，可以指现在或将来。
+  </div>
+</div>
+
+<!-- SECTION 1: 评论性名词/形容词短语 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-icon">💬</span>
+    <span class="section-title">一、在名词和形容词短语引导的评论性从句中</span>
+  </div>
+  <div class="section-body">
+
+    <!-- 类型 A：名词短语 -->
+    <div class="category">
+      <span class="cat-label"><span id="sec-60-typeA" style="display:block;position:relative;top:-60px;"></span>类型 A &nbsp; 名词短语</span>
+      <div class="formula-tag">es / considerar / (me,te,le…) parece / resulta + <span style="color:var(--red);font-weight:700;">名词</span> + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex">Es una <em>lástima</em> que no <em>sepas</em> hablar español. Sería muy útil.</div>
+        <div class="trans"><span class="zh">你不会说西班牙语，真是太可惜了，会很有用的。</span> &nbsp;·&nbsp; <span class="en">It's a shame you don't know how to speak Spanish. It would be very useful.</span></div>
+
+        <!-- 注释块 -->
+        <div style="margin: 6px 0 16px 0; background: #f8f5ff; border-left: 4px solid #7e57c2; border-radius: 0 8px 8px 0; padding: 14px 16px; font-size: 0.83rem; line-height: 1.8; color: #333;">
+          <div style="font-weight:700; color:#7e57c2; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">📝 语法注释</div>
+
+          <div style="margin-bottom:10px;">
+            <span style="font-weight:700; color:#2e7d32;">① 为什么用虚拟式 <em>sepas</em>？</span><br>
+            <span style="color:#555;">主句 <em style="color:#c62828;font-style:italic">Es una lástima que…</em> 是情感评价句。西班牙语中表达遗憾、高兴、难过等主观情绪时，<code style="background:#ede7f6;padding:1px 5px;border-radius:3px;font-size:0.9em;">que</code> 后的从句必须使用虚拟式。</span>
+          </div>
+
+          <div style="margin-bottom:12px;">
+            <span style="font-weight:700; color:#2e7d32;">② 为什么第二句用条件式 <em>Sería</em>，而不是虚拟式？</span><br>
+            <span style="color:#555;"><em style="color:#c62828;font-style:italic">Sería muy útil</em> 是独立的主句，已脱离 <em>Es una lástima que</em> 的控制，在陈述"如果你会西语，那就会很有用"这一假设后果。两者分工明确：</span>
+          </div>
+
+          <table style="width:100%;border-collapse:collapse;font-size:0.8rem;margin-bottom:4px;">
+            <thead>
+              <tr style="background:#ede7f6;">
+                <th style="padding:6px 10px;border:1px solid #d1c4e9;color:#4527a0;text-align:left;">句子</th>
+                <th style="padding:6px 10px;border:1px solid #d1c4e9;color:#4527a0;text-align:left;">语气</th>
+                <th style="padding:6px 10px;border:1px solid #d1c4e9;color:#4527a0;text-align:left;">含义</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;font-style:italic;color:#c62828;">Es muy útil.</td>
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;color:#1565c0;">陈述式</td>
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;">陈述事实——这是真的，很有用。</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;font-style:italic;color:#c62828;">Sería muy útil.</td>
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;color:#1565c0;">条件式（would be）</td>
+                <td style="padding:6px 10px;border:1px solid #e0e0e0;">假设后果——如果你会说西语，那<em>就会</em>很有用。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ③ 虚拟式 vs 条件式 -->
+          <div style="margin-top:14px; border-top:1px dashed #d1c4e9; padding-top:12px;">
+            <span style="font-weight:700; color:#2e7d32;">③ 虚拟式 vs 条件式——一句话说清</span><br>
+            <div style="margin-top:8px; display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+
+              <div style="background:#ede7f6; border-radius:8px; padding:10px 13px; border-top:3px solid #7e57c2;">
+                <div style="font-weight:800; color:#4527a0; font-size:0.77rem; letter-spacing:0.08em; margin-bottom:5px;">虚拟式 Subjuntivo</div>
+                <div style="color:#555; font-size:0.78rem; margin-bottom:6px;">在主句控制下的<strong>从句</strong>里使用。表达主观评价、情感、意愿触发的内容。</div>
+                <div style="font-family:'Lora',serif; font-style:italic; color:#c62828; font-size:0.81rem; margin-bottom:3px;">Es una lástima que no <b>sepas</b> hablar español.</div>
+                <div style="color:#888; font-size:0.74rem;">→ 主句（lástima）控制着 que 后面 · <em>sepas</em> 是它的附属</div>
+              </div>
+
+              <div style="background:#f3e5f5; border-radius:8px; padding:10px 13px; border-top:3px solid #ab47bc;">
+                <div style="font-weight:800; color:#6a1b9a; font-size:0.77rem; letter-spacing:0.08em; margin-bottom:5px;">条件式 Condicional</div>
+                <div style="color:#555; font-size:0.78rem; margin-bottom:6px;">独立的<strong>主句</strong>，已脱离虚拟式结构。表达"如果……就会……"的假设后果。</div>
+                <div style="font-family:'Lora',serif; font-style:italic; color:#c62828; font-size:0.81rem; margin-bottom:3px;"><b>Sería</b> muy útil.</div>
+                <div style="color:#888; font-size:0.74rem;">→ 独立主句，没有上级结构管它 · 表达假设推断</div>
+              </div>
+
+            </div>
+
+            <div style="margin-top:9px; background:#e8f5e9; border-left:3px solid #2e7d32; border-radius:0 6px 6px 0; padding:9px 13px; font-size:0.78rem; color:#333; line-height:1.7;">
+              <span style="font-weight:700; color:#1b5e20;">关键判断方法：</span>看这个动词是否还在主句的"管辖范围"内。<br>
+              在 <em style="color:#c62828;">que</em> 后面、受到评价/情感/意愿主句控制 → <strong>虚拟式</strong><br>
+              已经跳出来、自己独立成句、表达假设推断 → <strong>条件式</strong><br>
+              <span style="color:#888; font-size:0.75rem; font-style:italic;">Subjuntivo = subordinado · Condicional = independiente — 记住这组对立就够用了。</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ex">Considero un <em>acierto</em> que te <em>matricules</em> en Derecho.</div>
+        <div class="trans"><span class="zh">我觉得你报名学法律是个明智之举。</span> &nbsp;·&nbsp; <span class="en">I consider it a wise decision that you enrol in Law.</span></div>
+        <!-- 自复动词注释 -->
+        <div style="margin: 6px 0 14px 0; background: #fff8e1; border-left: 4px solid #f9a825; border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 0.82rem; line-height: 1.8; color: #333;">
+          <div style="font-weight:700; color:#f57f17; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">🔄 自复动词 · Verbo Reflexivo</div>
+          <div style="margin-bottom:6px;">
+            <span style="font-weight:700; color:#2e7d32;">matricularse</span>
+            <span style="color:#1565c0; font-size:0.78rem; margin-left:6px;">给自己报名 / 注册</span>
+            <span style="color:#888; font-size:0.75rem; font-style:italic; margin-left:6px;">to enrol / to register (oneself)</span>
+          </div>
+          <div style="color:#555;">
+            结构：<code style="background:#ffe082;padding:1px 6px;border-radius:3px;font-size:0.88em;font-weight:700;">te</code>（反身代词）＋ <code style="background:#ffe082;padding:1px 6px;border-radius:3px;font-size:0.88em;font-weight:700;">matricules</code>（虚拟式变位）<br>
+            <span style="color:#888;font-size:0.78rem;">反身代词 <em>te</em> 表示"为你自己"报名，动词本身变为虚拟式以配合主句评价结构。</span><br>
+            <span style="color:#888;font-size:0.78rem;">Structure: reflexive pronoun <em>te</em> = "for yourself" · verb in subjunctive to match the value-judgement main clause.</span>
+          </div>
+        </div>
+
+        <div class="ex">Me parece una <em>equivocación</em> que Susana <em>deje</em> de estudiar. ¡Con lo lista que es!</div>
+        <div class="trans"><span class="zh">我觉得苏萨纳放弃学习是个错误，她那么聪明！</span> &nbsp;·&nbsp; <span class="en">I think it's a mistake for Susana to stop studying. She's so smart!</span></div>
+
+        <!-- ══════════════════════════════════════════════
+             深度语法注释：Considerar vs Parecer + Con lo
+             ══════════════════════════════════════════════ -->
+        <div style="margin: 16px 0 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.10); font-size: 0.83rem; line-height: 1.75;">
+
+          <!-- 标题栏 -->
+          <div style="background: linear-gradient(135deg, #1a237e 0%, #283593 60%, #1565c0 100%); padding: 13px 20px; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size:1.1rem;">🔍</span>
+            <span style="font-weight:800; color:#fff; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase;">深度语法 · Análisis Gramatical</span>
+            <span style="margin-left:auto; background:rgba(255,255,255,0.15); color:#c5cae9; font-size:0.72rem; padding:2px 10px; border-radius:20px; font-weight:600; letter-spacing:0.05em;">这两句话的核心对比</span>
+          </div>
+
+          <div style="background:#f8f9ff; padding: 16px 20px 6px;">
+
+            <!-- 核心公式：谁是主语 -->
+            <div style="margin-bottom:14px;">
+              <div style="font-weight:800; color:#1a237e; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; padding-bottom:5px; border-bottom:2px solid #e8eaf6;">⚡ 核心区别：谁是主语</div>
+
+              <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:8px;">
+                <thead>
+                  <tr style="background:#e8eaf6;">
+                    <th style="padding:7px 12px; border:1px solid #c5cae9; color:#1a237e; text-align:left; font-weight:700;">句子</th>
+                    <th style="padding:7px 12px; border:1px solid #c5cae9; color:#1a237e; text-align:left; font-weight:700;">语法主语</th>
+                    <th style="padding:7px 12px; border:1px solid #c5cae9; color:#1a237e; text-align:left; font-weight:700;">说话者角色</th>
+                    <th style="padding:7px 12px; border:1px solid #c5cae9; color:#1a237e; text-align:left; font-weight:700;">中文感觉</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fff;">
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; font-style:italic; color:#c62828; font-family:'Lora',serif; font-size:0.82rem;"><b>Yo</b> considero un acierto que…</td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0;"><span style="background:#c8e6c9; color:#1b5e20; padding:2px 8px; border-radius:10px; font-weight:700; font-size:0.75rem;">我 (yo)</span></td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; color:#555;">主动输出判断</td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; color:#1565c0; font-weight:600;">"我认为……"</td>
+                  </tr>
+                  <tr style="background:#f8f9ff;">
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; font-style:italic; color:#c62828; font-family:'Lora',serif; font-size:0.82rem;"><b>Me</b> parece una equivocación que…</td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0;"><span style="background:#bbdefb; color:#0d47a1; padding:2px 8px; border-radius:10px; font-weight:700; font-size:0.75rem;">从句 (que…)</span></td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; color:#555;">被动接收印象</td>
+                    <td style="padding:7px 12px; border:1px solid #e0e0e0; color:#1565c0; font-weight:600;">"在我看来……"</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="background:#e8eaf6; border-radius:8px; padding:10px 14px; color:#283593; font-size:0.79rem; line-height:1.7;">
+                <span style="font-weight:700;">为什么 <em>parece</em> 用第三人称单数？</span><br>
+                因为主语是 <em style="color:#c62828;">que Susana deje de estudiar</em>（苏萨纳放弃学业这件事），"这件事"是单数概念，动词必须随之变位。<br>
+                <span style="color:#7986cb; font-size:0.76rem;">同理：<em>Me gusta el café</em>（咖啡让我喜欢）· <em>Me molesta el ruido</em>（噪音让我烦）——主语永远是触发感觉的事物，而非说话者。</span>
+              </div>
+            </div>
+
+            <!-- 两条路并排 -->
+            <div style="margin-bottom:14px;">
+              <div style="font-weight:800; color:#1a237e; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; padding-bottom:5px; border-bottom:2px solid #e8eaf6;">🛤️ 两条评价路径——意思相近，视角不同</div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                <div style="background:#e8f5e9; border-radius:8px; padding:12px 14px; border-top:3px solid #2e7d32;">
+                  <div style="font-weight:800; color:#1b5e20; font-size:0.78rem; letter-spacing:0.08em; margin-bottom:6px;">路径一 · 判断型</div>
+                  <div style="font-family:'Lora',serif; font-style:italic; color:#c62828; font-size:0.85rem; margin-bottom:6px;">Considero / Creo / Juzgo…</div>
+                  <div style="color:#2e7d32; font-weight:700; font-size:0.78rem; margin-bottom:4px;">「我」是主语</div>
+                  <div style="color:#555; font-size:0.77rem;">说话者主动承担判断，更正式、更坚定，常见于书面语、法律或学术语境。</div>
+                </div>
+                <div style="background:#e3f2fd; border-radius:8px; padding:12px 14px; border-top:3px solid #1565c0;">
+                  <div style="font-weight:800; color:#0d47a1; font-size:0.78rem; letter-spacing:0.08em; margin-bottom:6px;">路径二 · 感知型</div>
+                  <div style="font-family:'Lora',serif; font-style:italic; color:#c62828; font-size:0.85rem; margin-bottom:6px;">Me parece / Me resulta…</div>
+                  <div style="color:#1565c0; font-weight:700; font-size:0.78rem; margin-bottom:4px;">「从句」是主语</div>
+                  <div style="color:#555; font-size:0.77rem;">说话者被动接收印象，更口语、更温和。西语深层习惯：让"事物"当主语。</div>
+                </div>
+              </div>
+              <div style="margin-top:8px; background:#fff3e0; border-left:3px solid #ff6f00; border-radius:0 6px 6px 0; padding:8px 12px; font-size:0.77rem; color:#555;">
+                <span style="color:#e65100; font-weight:700;">💡 我的看法：</span>日常对话里两者几乎可以互换。但这个区别揭示了西班牙语的深层习惯——<strong>倾向于把"事物"而非"人"设为主语</strong>。<em>Gustar、molestar、parecer、interesar</em> 都是这个逻辑。掌握这个逻辑，比死记动词列表要有用得多。
+              </div>
+            </div>
+
+            <!-- Con lo lista que es -->
+            <div style="margin-bottom:8px;">
+              <div style="font-weight:800; color:#1a237e; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; padding-bottom:5px; border-bottom:2px solid #e8eaf6;">✨ 地道感叹句：¡Con lo lista que es!</div>
+              <div style="background:#fce4ec; border-radius:8px; padding:12px 14px; border-left:4px solid #c62828;">
+                <div style="font-weight:700; color:#b71c1c; margin-bottom:6px; font-size:0.8rem; letter-spacing:0.05em;">结构：con lo + 形容词/副词 + que + 动词</div>
+                <div style="color:#555; font-size:0.78rem; margin-bottom:8px;">表达"明明……却……"的反差与感叹，非常口语化地道：</div>
+                <div style="display:grid; gap:4px;">
+                  <div style="font-family:'Lora',serif; font-style:italic; font-size:0.82rem; color:#333;">¡Con lo <b style="color:#c62828;">lista</b> que es! <span style="font-style:normal; color:#888; font-size:0.75rem;">→ 她那么聪明，（放弃学习真是浪费）</span></div>
+                  <div style="font-family:'Lora',serif; font-style:italic; font-size:0.82rem; color:#333;">¡Con lo <b style="color:#c62828;">tarde</b> que es! <span style="font-style:normal; color:#888; font-size:0.75rem;">→ 都这么晚了，（你还不睡）</span></div>
+                  <div style="font-family:'Lora',serif; font-style:italic; font-size:0.82rem; color:#333;">¡Con lo <b style="color:#c62828;">bien</b> que cocinas! <span style="font-style:normal; color:#888; font-size:0.75rem;">→ 你做菜这么好，（应该开餐厅）</span></div>
+                </div>
+                <div style="margin-top:8px; font-size:0.75rem; color:#888; font-style:italic;">本身不触发虚拟式，但前面的评价句会触发——两个语法点在这一句话里同时出现。</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- ══════════════════════════════════════════════ -->
+
+        <div class="ex">Resulta de mal gusto que no <em>inviten</em> a sus tíos a la boda.</div>
+        <div class="trans"><span class="zh">不邀请他们的叔叔阿姨参加婚礼，这很失礼。</span> &nbsp;·&nbsp; <span class="en">It's in bad taste that they don't invite their aunts and uncles to the wedding.</span></div>
+      </div>
+
+      <!-- ser / considerar -->
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">ser / considerar… + 名词 + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">una pena</span><span class="verb-zh">可惜，令人遗憾</span><span class="verb-en">a shame / a pity</span>
+          <span class="verb-ex"><em>Es una <b>pena</b> que no <b>puedas</b> venir.</em></span>
+          <span class="verb-ex-tr">你不能来，真是太可惜了。· It's a shame you can't come.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">una lástima</span><span class="verb-zh">真遗憾，太可惜</span><span class="verb-en">a pity / what a shame</span>
+          <span class="verb-ex"><em>Considero una <b>lástima</b> que no <b>inviertan</b> más en educación.</em></span>
+          <span class="verb-ex-tr">我觉得不多投资教育真是太遗憾了。· I consider it a pity that they don't invest more in education.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">un escándalo</span><span class="verb-zh">丑闻，太过分了</span><span class="verb-en">a scandal / outrageous</span>
+          <span class="verb-ex"><em>Es un <b>escándalo</b> que <b>cobren</b> tanto.</em></span>
+          <span class="verb-ex-tr">他们收这么多钱，太过分了。· It's outrageous that they charge so much.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">una injusticia</span><span class="verb-zh">不公平，不公正</span><span class="verb-en">an injustice / unfair</span>
+          <span class="verb-ex"><em>Considero una <b>injusticia</b> que <b>cobren</b> más por hacer menos.</em></span>
+          <span class="verb-ex-tr">我觉得做得少却收得多，这不公平。· I consider it an injustice that they charge more for doing less.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">un acierto</span><span class="verb-zh">明智之举，做得对</span><span class="verb-en">a good move / wise decision</span>
+          <span class="verb-ex"><em>Es un <b>acierto</b> que <b>estudies</b> chino.</em></span>
+          <span class="verb-ex-tr">你学中文是个明智的选择。· It's a smart move that you're studying Chinese.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">un error</span><span class="verb-zh">错误，失误</span><span class="verb-en">a mistake / an error</span>
+          <span class="verb-ex"><em>Considero un <b>error</b> que no <b>escuches</b> a tus padres.</em></span>
+          <span class="verb-ex-tr">我觉得你不听父母的话是个错误。· I consider it a mistake that you don't listen to your parents.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">una vergüenza</span><span class="verb-zh">丢脸，太可耻了</span><span class="verb-en">a disgrace / shameful</span>
+          <span class="verb-ex"><em>Considero una <b>vergüenza</b> que nadie <b>haga</b> nada al respecto.</em></span>
+          <span class="verb-ex-tr">我觉得没有人采取行动，真是太可耻了。· I consider it a disgrace that nobody does anything about it.</span>
+        </div>
+      </div>
+      <!-- parecer -->
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">parecer… + 名词 + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">parecer una equivocación</span><span class="verb-zh">觉得是判断失误</span><span class="verb-en">to seem like a blunder</span>
+          <span class="verb-ex"><em>Me <b>parece una equivocación</b> que <b>vendas</b> la casa ahora.</em></span>
+          <span class="verb-ex-tr">我觉得你现在卖房子是个失误。· I think it's a mistake that you're selling the house now.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">de mal gusto</span><span class="verb-zh">品味差，失礼</span><span class="verb-en">in bad taste</span>
+          <span class="verb-ex"><em>Me parece de mal <b>gusto</b> que no <b>avisen</b> antes.</em></span>
+          <span class="verb-ex-tr">他们事先不通知，我觉得很失礼。· I find it in bad taste that they don't give notice beforehand.</span>
+        </div>
+
+        <div class="verb-item">
+          <span class="verb-es">parecer un acierto</span><span class="verb-zh">觉得是明智之举</span><span class="verb-en">to seem like a good move</span>
+          <span class="verb-ex"><em>Me <b>parece un acierto</b> que <b>cambies</b> de trabajo.</em></span>
+          <span class="verb-ex-tr">我觉得你换工作是个明智的决定。· I think it's a good move that you're changing jobs.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">parecer un error</span><span class="verb-zh">觉得是个错误</span><span class="verb-en">to seem like a mistake</span>
+          <span class="verb-ex"><em>Me <b>parece un error</b> que no <b>estudies</b> más.</em></span>
+          <span class="verb-ex-tr">我觉得你不多学习是个错误。· I think it's a mistake that you don't study more.</span>
+        </div>
+
+        <div class="verb-item">
+          <span class="verb-es">parecer una injusticia</span><span class="verb-zh">觉得不公平</span><span class="verb-en">to seem unfair / unjust</span>
+          <span class="verb-ex"><em>Me <b>parece una injusticia</b> que no la <b>asciendan</b>.</em></span>
+          <span class="verb-ex-tr">我觉得不给她升职很不公平。· I think it's an injustice that they don't promote her.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">parecer una pena</span><span class="verb-zh">觉得很可惜</span><span class="verb-en">to seem a shame</span>
+          <span class="verb-ex"><em>Me <b>parece una pena</b> que no <b>viajes</b> más.</em></span>
+          <span class="verb-ex-tr">我觉得你不多旅行很可惜。· I think it's a shame that you don't travel more.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">parecer una vergüenza</span><span class="verb-zh">觉得太可耻了</span><span class="verb-en">to seem a disgrace</span>
+          <span class="verb-ex"><em>Me <b>parece una vergüenza</b> que <b>cobren</b> tanto por tan poco.</em></span>
+          <span class="verb-ex-tr">收这么多钱却做这么少，我觉得太可耻了。· I think it's a disgrace that they charge so much for so little.</span>
+        </div>
+      </div>
+      <!-- resultar -->
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">resultar… + 名词 + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">resultar de mal gusto</span><span class="verb-zh">显得失礼，很没品</span><span class="verb-en">to come across as bad taste</span>
+          <span class="verb-ex"><em><b>Resulta</b> de mal gusto que no <b>inviten</b> a sus tíos a la boda.</em></span>
+          <span class="verb-ex-tr">不邀请他们的叔叔阿姨参加婚礼，这很失礼。· It comes across as bad taste that they don't invite their aunts and uncles to the wedding.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">resultar una vergüenza</span><span class="verb-zh">显得很丢脸</span><span class="verb-en">to turn out to be a disgrace</span>
+          <span class="verb-ex"><em><b>Resulta</b> una vergüenza que no <b>haya</b> suficientes escuelas.</em></span>
+          <span class="verb-ex-tr">学校这么少，真是太可耻了。· It turns out to be a disgrace that there aren't enough schools.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">resultar un escándalo</span><span class="verb-zh">显得很过分</span><span class="verb-en">to turn out scandalous</span>
+          <span class="verb-ex"><em><b>Resulta</b> un escándalo que <b>suban</b> los precios otra vez.</em></span>
+          <span class="verb-ex-tr">又涨价了，真是太过分了。· It turns out to be outrageous that they're raising prices again.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 类型 B：形容词短语 -->
+    <div class="category">
+      <span class="cat-label">类型 B &nbsp; 形容词短语</span>
+      <div class="formula-tag">es / considerar / (me,te,le…) parece / resulta + <span style="color:var(--red);font-weight:700;">形容词</span> / bien / mal + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex">Parad ya. No es <em>bueno</em> que <em>cenéis</em> tanto.</div>
+        <div class="trans"><span class="zh">停下来吧，你们吃这么多晚饭不好。</span> &nbsp;·&nbsp; <span class="en">Stop now. It's not good that you eat so much for dinner.</span></div>
+
+        <div class="ex">Luis considera <em>injusto</em> que <em>tenga</em> que hacer él todo el trabajo.</div>
+        <div class="trans"><span class="zh">路易斯觉得让他一个人做所有工作很不公平。</span> &nbsp;·&nbsp; <span class="en">Luis considers it unfair that he has to do all the work himself.</span></div>
+
+        <div class="ex">Parece <em>vergonzoso</em> que se <em>niegue</em> a cuidar a su madre.</div>
+        <div class="trans"><span class="zh">他拒绝照顾自己的母亲，这太令人羞耻了。</span> &nbsp;·&nbsp; <span class="en">It seems shameful that he refuses to take care of his mother.</span></div>
+
+        <div class="ex">Resulta <em>lamentable</em> que <em>haya</em> que tener dinero para que te traten bien.</div>
+        <div class="trans"><span class="zh">要有钱才能得到好的待遇，这真是令人遗憾。</span> &nbsp;·&nbsp; <span class="en">It's lamentable that you have to have money for people to treat you well.</span></div>
+      </div>
+
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">ser / considerar… + 形容词 + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">bueno / malo</span><span class="verb-zh">好的 / 不好的</span><span class="verb-en">good / bad</span>
+          <span class="verb-ex"><em>Es <b>malo</b> que no <b>duermas</b> bien.</em></span>
+          <span class="verb-ex-tr">你睡不好对身体不好。· It's bad that you don't sleep well.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">mejor / peor</span><span class="verb-zh">更好的 / 更差的</span><span class="verb-en">better / worse</span>
+          <span class="verb-ex"><em>Es <b>mejor</b> que <b>llegues</b> temprano.</em></span>
+          <span class="verb-ex-tr">你早点到比较好。· It's better that you arrive early.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">vergonzoso</span><span class="verb-zh">可耻的，丢脸的</span><span class="verb-en">shameful / disgraceful</span>
+          <span class="verb-ex"><em>Es <b>vergonzoso</b> que <b>mientan</b> tanto.</em></span>
+          <span class="verb-ex-tr">他们这么爱撒谎，太可耻了。· It's shameful that they lie so much.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">absurdo</span><span class="verb-zh">荒谬的，不合理的</span><span class="verb-en">absurd / ridiculous</span>
+          <span class="verb-ex"><em>Es <b>absurdo</b> que <b>esperes</b> tres horas.</em></span>
+          <span class="verb-ex-tr">等三个小时，太荒谬了。· It's absurd that you wait three hours.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">estupendo</span><span class="verb-zh">太棒了，极好的</span><span class="verb-en">wonderful / great</span>
+          <span class="verb-ex"><em>Es <b>estupendo</b> que <b>hayas</b> encontrado trabajo.</em></span>
+          <span class="verb-ex-tr">你找到工作了，太棒了！· It's wonderful that you've found a job.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">incomprensible</span><span class="verb-zh">难以理解的</span><span class="verb-en">incomprehensible</span>
+          <span class="verb-ex"><em>Es <b>incomprensible</b> que no <b>pida</b> perdón.</em></span>
+          <span class="verb-ex-tr">他不道歉，真让人难以理解。· It's incomprehensible that he doesn't apologize.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">injusto</span><span class="verb-zh">不公平的</span><span class="verb-en">unfair / unjust</span>
+          <span class="verb-ex"><em>Es <b>injusto</b> que <b>gane</b> menos que sus compañeros.</em></span>
+          <span class="verb-ex-tr">他比同事赚得少，这不公平。· It's unfair that he earns less than his colleagues.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">lógico</span><span class="verb-zh">合理的，合乎逻辑的</span><span class="verb-en">logical / reasonable</span>
+          <span class="verb-ex"><em>Es <b>lógico</b> que <b>estés</b> cansado.</em></span>
+          <span class="verb-ex-tr">你累了是很正常的。· It's logical that you're tired.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">lamentable</span><span class="verb-zh">令人遗憾的，可悲的</span><span class="verb-en">lamentable / regrettable</span>
+          <span class="verb-ex"><em>Es <b>lamentable</b> que no <b>haya</b> más médicos.</em></span>
+          <span class="verb-ex-tr">医生这么少，真令人遗憾。· It's lamentable that there aren't more doctors.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">útil / inútil</span><span class="verb-zh">有用的 / 没用的</span><span class="verb-en">useful / useless</span>
+          <span class="verb-ex"><em>Es <b>útil</b> que <b>aprendas</b> a cocinar.</em></span>
+          <span class="verb-ex-tr">你学做饭很有用。· It's useful that you learn to cook.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">escandaloso</span><span class="verb-zh">令人震惊的，过分的</span><span class="verb-en">scandalous / shocking</span>
+          <span class="verb-ex"><em>Considero <b>escandaloso</b> que no <b>haya</b> agua potable.</em></span>
+          <span class="verb-ex-tr">我觉得没有饮用水，太令人震惊了。· I consider it scandalous that there's no drinking water.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">fenomenal</span><span class="verb-zh">太好了，非常棒</span><span class="verb-en">fantastic / great</span>
+          <span class="verb-ex"><em>Considero <b>fenomenal</b> que <b>abran</b> un nuevo hospital.</em></span>
+          <span class="verb-ex-tr">我觉得新开一家医院太棒了。· I consider it fantastic that they're opening a new hospital.</span>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">parecer… + 形容词/bien/mal + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">bien / mal</span><span class="verb-zh">好 / 不好（评价）</span><span class="verb-en">good / bad (judgement)</span>
+          <span class="verb-ex"><em>Me parece <b>bien</b> que <b>descanses</b> un poco.</em></span>
+          <span class="verb-ex-tr">我觉得你休息一下很好。· I think it's good that you rest a little.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">absurdo</span><span class="verb-zh">荒谬的</span><span class="verb-en">absurd</span>
+          <span class="verb-ex"><em>Me parece <b>absurdo</b> que no te <b>dejen</b> entrar.</em></span>
+          <span class="verb-ex-tr">我觉得不让你进去太荒谬了。· I find it absurd that they won't let you in.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">estupendo</span><span class="verb-zh">太棒了</span><span class="verb-en">wonderful</span>
+          <span class="verb-ex"><em>Me parece <b>estupendo</b> que <b>vengas</b> a vivir aquí.</em></span>
+          <span class="verb-ex-tr">你搬来这里住，我觉得太好了。· I think it's wonderful that you're coming to live here.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">fatal</span><span class="verb-zh">太糟了，很差劲</span><span class="verb-en">awful / terrible</span>
+          <span class="verb-ex"><em>Me parece <b>fatal</b> que no te <b>avisen</b>.</em></span>
+          <span class="verb-ex-tr">他们不通知你，我觉得太差劲了。· I find it awful that they don't let you know.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">incomprensible</span><span class="verb-zh">难以理解的</span><span class="verb-en">incomprehensible</span>
+          <span class="verb-ex"><em>Me parece <b>incomprensible</b> que no <b>reaccionen</b>.</em></span>
+          <span class="verb-ex-tr">他们不做任何反应，我觉得难以理解。· I find it incomprehensible that they don't react.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">injusto</span><span class="verb-zh">不公平的</span><span class="verb-en">unfair</span>
+          <span class="verb-ex"><em>Me parece <b>injusto</b> que <b>suspendan</b> al alumno por eso.</em></span>
+          <span class="verb-ex-tr">我觉得为了这个就让学生不及格太不公平了。· I find it unfair that they fail the student for that.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">inútil</span><span class="verb-zh">没用的，白费力气</span><span class="verb-en">useless / pointless</span>
+          <span class="verb-ex"><em>Me parece <b>inútil</b> que <b>insistas</b> más.</em></span>
+          <span class="verb-ex-tr">我觉得你再坚持也没用。· I find it pointless that you keep insisting.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">pésimo</span><span class="verb-zh">非常糟糕，极差</span><span class="verb-en">dreadful / very bad</span>
+          <span class="verb-ex"><em>Me parece <b>pésimo</b> que <b>cierren</b> el parque.</em></span>
+          <span class="verb-ex-tr">他们关闭公园，我觉得太糟糕了。· I find it dreadful that they're closing the park.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">fenomenal</span><span class="verb-zh">太棒了，非常好</span><span class="verb-en">fantastic</span>
+          <span class="verb-ex"><em>Me parece <b>fenomenal</b> que <b>tomes</b> esa decisión.</em></span>
+          <span class="verb-ex-tr">我觉得你做这个决定太棒了。· I find it fantastic that you're making that decision.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">lamentable</span><span class="verb-zh">令人遗憾的</span><span class="verb-en">lamentable</span>
+          <span class="verb-ex"><em>Me parece <b>lamentable</b> que no <b>ayuden</b> a los mayores.</em></span>
+          <span class="verb-ex-tr">我觉得不帮助老人真令人遗憾。· I find it lamentable that they don't help the elderly.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">vergonzoso</span><span class="verb-zh">可耻的，丢脸的</span><span class="verb-en">shameful</span>
+          <span class="verb-ex"><em>Me parece <b>vergonzoso</b> que <b>haya</b> niños sin escuela.</em></span>
+          <span class="verb-ex-tr">我觉得有孩子没学上，太可耻了。· I find it shameful that there are children without school.</span>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:3px 10px;margin:14px 0 6px;display:inline-block;letter-spacing:0.04em;">resultar… + 形容词 + que + 虚拟式</p>
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">lamentable</span><span class="verb-zh">令人遗憾的</span><span class="verb-en">lamentable</span>
+          <span class="verb-ex"><em><b>Resulta lamentable</b> que <b>haya</b> que tener dinero para que te traten bien.</em></span>
+          <span class="verb-ex-tr">要有钱才能得到好的待遇，这真是令人遗憾。· It's lamentable that you have to have money for people to treat you well.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">vergonzoso</span><span class="verb-zh">可耻的</span><span class="verb-en">shameful</span>
+          <span class="verb-ex"><em><b>Resulta vergonzoso</b> que se <b>niegue</b> a cuidar a su madre.</em></span>
+          <span class="verb-ex-tr">他拒绝照顾自己的母亲，这太令人羞耻了。· It's shameful that he refuses to take care of his mother.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">incomprensible</span><span class="verb-zh">难以理解的</span><span class="verb-en">incomprehensible</span>
+          <span class="verb-ex"><em><b>Resulta incomprensible</b> que nadie <b>sepa</b> nada.</em></span>
+          <span class="verb-ex-tr">没有人知道任何事，真让人难以理解。· It's incomprehensible that nobody knows anything.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2: 可能性短语 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-icon">🎲</span>
+    <span class="section-title">二、在表示可能性的短语引导的从句中</span>
+  </div>
+  <div class="section-body">
+
+    <div class="category">
+      <span class="cat-label">可能性表达</span>
+      <div class="formula-tag"><span id="sec-60-puede" style="display:block;position:relative;top:-60px;"></span>puede / es posible / es probable / es dudoso / es imposible + que + 虚拟式</div>
+      <div class="examples-block">
+        <div class="ex">Es <em>imposible</em> que <em>sea</em> Adolfo. Está en México.</div>
+        <div class="trans"><span class="zh">不可能是阿道夫，他在墨西哥呢。</span> &nbsp;·&nbsp; <span class="en">It's impossible that it's Adolfo. He's in Mexico.</span></div>
+
+        <div class="ex">—¿Vas a presentarte al examen del miércoles? —Es <em>posible</em> que me <em>presente</em>, pero no estoy seguro.</div>
+        <div class="trans"><span class="zh">——你周三要去考试吗？——可能会去，但我还不确定。</span> &nbsp;·&nbsp; <span class="en">—Are you going to sit the Wednesday exam? —It's possible I will, but I'm not sure.</span></div>
+      </div>
+
+      <div class="verb-grid">
+        <div class="verb-item">
+          <span class="verb-es">puede (que)</span><span class="verb-zh">也许，可能</span><span class="verb-en">maybe / perhaps</span>
+          <span class="verb-ex"><em><b>Puede</b> que <b>llegue</b> tarde hoy.</em></span>
+          <span class="verb-ex-tr">今天我可能会晚到。· Maybe I'll arrive late today.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">es posible</span><span class="verb-zh">有可能</span><span class="verb-en">it's possible</span>
+          <span class="verb-ex"><em>Es <b>posible</b> que <b>llueva</b> esta tarde.</em></span>
+          <span class="verb-ex-tr">今天下午有可能会下雨。· It's possible that it will rain this afternoon.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">es probable</span><span class="verb-zh">很可能，大概</span><span class="verb-en">it's likely / probable</span>
+          <span class="verb-ex"><em>Es <b>probable</b> que no <b>vengan</b> a la fiesta.</em></span>
+          <span class="verb-ex-tr">他们很可能不来派对。· It's likely they won't come to the party.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">es dudoso</span><span class="verb-zh">令人怀疑，不太确定</span><span class="verb-en">it's doubtful / unlikely</span>
+          <span class="verb-ex"><em>Es <b>dudoso</b> que <b>terminen</b> a tiempo.</em></span>
+          <span class="verb-ex-tr">他们能否准时完成，让人怀疑。· It's doubtful that they'll finish on time.</span>
+        </div>
+        <div class="verb-item">
+          <span class="verb-es">es imposible</span><span class="verb-zh">不可能</span><span class="verb-en">it's impossible</span>
+          <span class="verb-ex"><em>Es <b>imposible</b> que <b>haga</b> tanto calor en enero.</em></span>
+          <span class="verb-ex-tr">一月份不可能这么热。· It's impossible that it's so hot in January.</span>
+        </div>
+      </div>
+    </div>
+<div class="contrast-insert"><div class="ci-hdr" style="background:#9b2020;">⚠️ 对比：可能性副词/短语的程度排序 + 接语气规则</div><div class="ci-body"><div style="padding:12px 16px 0;"><div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9b2020;margin-bottom:10px;">可能性从低到高</div><div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#ddd;border-radius:8px;overflow:hidden;margin-bottom:12px;"><div style="background:#fdecea;padding:10px 10px 8px;text-align:center;"><div style="font-size:0.65rem;font-weight:800;color:#9b2020;margin-bottom:4px;">不可能</div><div style="font-style:italic;font-size:0.78rem;font-weight:700;">es imposible</div><div style="font-size:0.68rem;color:#555;margin-top:4px;">只接虚拟式</div></div><div style="background:#fdf5dc;padding:10px 10px 8px;text-align:center;"><div style="font-size:0.65rem;font-weight:800;color:#7a5200;margin-bottom:4px;">不太可能</div><div style="font-style:italic;font-size:0.78rem;font-weight:700;">es dudoso</div><div style="font-size:0.68rem;color:#555;margin-top:4px;">只接虚拟式</div></div><div style="background:#e4ecf8;padding:10px 10px 8px;text-align:center;"><div style="font-size:0.65rem;font-weight:800;color:#1a3f7a;margin-bottom:4px;">有可能</div><div style="font-style:italic;font-size:0.78rem;font-weight:700;">es posible<br>puede (que)</div><div style="font-size:0.68rem;color:#555;margin-top:4px;">只接虚拟式</div></div><div style="background:#e6f4ec;padding:10px 10px 8px;text-align:center;"><div style="font-size:0.65rem;font-weight:800;color:#1a5c38;margin-bottom:4px;">很可能</div><div style="font-style:italic;font-size:0.78rem;font-weight:700;">es probable</div><div style="font-size:0.68rem;color:#555;margin-top:4px;">只接虚拟式</div></div><div style="background:#f0eafb;padding:10px 10px 8px;text-align:center;"><div style="font-size:0.65rem;font-weight:800;color:#5b3fa6;margin-bottom:4px;">也许（两可）</div><div style="font-style:italic;font-size:0.78rem;font-weight:700;">quizá<br>tal vez<br>acaso</div><div style="font-size:0.68rem;color:#555;margin-top:4px;">虚拟式 <em>或</em> 陈述式</div></div></div></div><div class="ci-note"><strong>关键分界线</strong>：<em>es posible / puede que / es probable / es dudoso / es imposible</em> 这五个表达<strong>只能接虚拟式</strong>，没有陈述式选项。<br><em>quizá / tal vez / acaso / probablemente / posiblemente</em>（第57课）则<strong>虚拟式和陈述式均可</strong>，选哪个取决于说话者的把握程度。<br>口诀：固定短语（es posible…）→ 只有虚拟式；副词（quizá…）→ 两种都行。</div></div></div>
+
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="key-rule" style="border-color:var(--green);background:var(--green-light);">
+  <div class="kr-title" style="color:var(--green);">📌 总结：触发虚拟式的结构（本课）</div>
+  <div class="kr-body">
+    <strong>① 名词短语评价</strong>（es una pena / un error / una lástima…）+ que + 虚拟式<br>
+    <strong>② 形容词短语评价</strong>（es bueno / injusto / lamentable / me parece bien…）+ que + 虚拟式<br>
+    <strong>③ 可能性表达</strong>（puede / es posible / es probable / es imposible…）+ que + 虚拟式
+  </div>
+</div>
+
+
+
+
+<div id="search-bar" style="
+  position:fixed; top:14px; right:14px; z-index:9999;
+  display:flex; align-items:center; gap:6px;
+  background:#0f0f14; border-radius:10px;
+  padding:8px 12px; box-shadow:0 4px 20px rgba(0,0,0,0.35);
+  font-family:'DM Sans',sans-serif;
+">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  <input id="search-input" type="text" placeholder="搜索…" style="
+    background:transparent; border:none; outline:none;
+    color:white; font-size:0.82rem; width:130px;
+    font-family:'DM Sans',sans-serif;
+  ">
+  <span id="search-count" style="font-size:0.72rem;color:rgba(255,255,255,0.4);min-width:32px;"></span>
+  <button onclick="searchNav(-1)" style="background:rgba(255,255,255,0.1);border:none;color:white;border-radius:5px;width:22px;height:22px;cursor:pointer;font-size:0.8rem;display:flex;align-items:center;justify-content:center;">↑</button>
+  <button onclick="searchNav(1)"  style="background:rgba(255,255,255,0.1);border:none;color:white;border-radius:5px;width:22px;height:22px;cursor:pointer;font-size:0.8rem;display:flex;align-items:center;justify-content:center;">↓</button>
+  <button onclick="clearSearch()" style="background:transparent;border:none;color:rgba(255,255,255,0.35);cursor:pointer;font-size:1rem;line-height:1;padding:0 2px;">×</button>
+</div>
+
+<style>
+.search-hl {
+  background:#f0d060; color:#111; border-radius:2px;
+}
+.search-hl.search-active {
+  background:#ff9800; color:#000; outline:2px solid #ff9800;
+}
+</style>
+
+<script>
+var searchMatches = [];
+var searchIdx = -1;
+var originalBody = null;
+
+function doSearch(q) {
+  // Clear previous highlights by removing mark tags
+  var marks = document.querySelectorAll('mark.search-hl');
+  while (marks.length > 0) {
+    var m = marks[0];
+    var text = document.createTextNode(m.textContent);
+    m.parentNode.insertBefore(text, m);
+    m.parentNode.removeChild(m);
+    marks = document.querySelectorAll('mark.search-hl');
+  }
+  searchMatches = [];
+  searchIdx = -1;
+
+  var countEl = document.getElementById('search-count');
+  if (!q || q.length < 1) {
+    if (countEl) countEl.textContent = '';
+    return;
+  }
+
+  // Use range-based search
+  var ql = q.toLowerCase();
+  var bodyText = document.body.innerHTML;
+  // Simple highlight via innerHTML - fast and reliable
+  // But need to avoid replacing inside tags
+  // Use a safer approach: find text nodes manually
+  function walk(node) {
+    if (!node) return;
+    if (node.nodeType === 1) { // element
+      var tag = node.tagName.toUpperCase();
+      if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'MARK') return;
+      if (node.id === 'search-bar') return;
+      // Process children in reverse to avoid index shifting
+      var kids = Array.prototype.slice.call(node.childNodes);
+      for (var i = 0; i < kids.length; i++) walk(kids[i]);
+    } else if (node.nodeType === 3) { // text
+      var val = node.nodeValue;
+      if (!val || val.toLowerCase().indexOf(ql) < 0) return;
+      var parent = node.parentNode;
+      if (!parent) return;
+      var lower = val.toLowerCase();
+      var idx = lower.indexOf(ql);
+      if (idx < 0) return;
+      // Split and insert mark
+      var before = document.createTextNode(val.slice(0, idx));
+      var mark = document.createElement('mark');
+      mark.className = 'search-hl';
+      mark.textContent = val.slice(idx, idx + q.length);
+      var after = document.createTextNode(val.slice(idx + q.length));
+      parent.insertBefore(before, node);
+      parent.insertBefore(mark, node);
+      parent.insertBefore(after, node);
+      parent.removeChild(node);
+      // Continue searching in the 'after' text node
+      walk(after);
+    }
+  }
+  walk(document.body);
+
+  searchMatches = Array.prototype.slice.call(document.querySelectorAll('mark.search-hl'));
+  var count = searchMatches.length;
+  if (countEl) countEl.textContent = count ? '1/' + count : '无';
+  if (count) { searchIdx = 0; activateMatch(0); }
+}
+
+function activateMatch(i) {
+  var active = document.querySelectorAll('mark.search-hl.search-active');
+  for (var j = 0; j < active.length; j++) active[j].classList.remove('search-active');
+  if (!searchMatches[i]) return;
+  searchMatches[i].classList.add('search-active');
+  var top = 0, obj = searchMatches[i];
+  while (obj) { top += (obj.offsetTop || 0); obj = obj.offsetParent; }
+  window.scrollTo(0, Math.max(0, top - 150));
+  var countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = (i + 1) + '/' + searchMatches.length;
+}
+
+function searchNav(dir) {
+  if (!searchMatches.length) return;
+  searchIdx = (searchIdx + dir + searchMatches.length) % searchMatches.length;
+  activateMatch(searchIdx);
+}
+
+function clearSearch() {
+  var inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  var marks = document.querySelectorAll('mark.search-hl');
+  while (marks.length > 0) {
+    var m = marks[0];
+    m.parentNode.insertBefore(document.createTextNode(m.textContent), m);
+    m.parentNode.removeChild(m);
+    marks = document.querySelectorAll('mark.search-hl');
+  }
+  searchMatches = []; searchIdx = -1;
+  var countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = '';
+}
+
+// Bind events after DOM ready
+function bindSearch() {
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.oninput = function() { doSearch(this.value.trim()); };
+  inp.onkeydown = function(e) {
+    var key = e.key || e.keyCode;
+    if (key === 'Enter' || key === 13) { e.shiftKey ? searchNav(-1) : searchNav(1); }
+    if (key === 'Escape' || key === 27) { clearSearch(); }
+  };
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bindSearch);
+} else {
+  bindSearch();
+}
+</script>
+
+
+<a href="#page-top" class="nav-link" data-id="page-top" style="
+  position:fixed; bottom:20px; right:14px; z-index:9999;
+  background:#0f0f14; color:white;
+  border-radius:10px; padding:9px 14px;
+  font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:700;
+  text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,0.3);
+  letter-spacing:0.04em;
+;cursor:pointer;border:none;">↑ 返回顶部</a>
+
+
+
+</body>
+</html>
